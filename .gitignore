@@ -1,0 +1,59 @@
+# Data files (too large for git)
+data/
+*.h5
+*.hdf5
+*.zip
+*.7z
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.so
+.eggs/
+
+# Virtual environments
+.venv/
+.env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.lof
+paper/*.lot
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.pdf
+
+# Upload staging
+arxiv_upload/
+upload/
+
+# Checkpoints (keep JSON results)
+checkpoint.json
+checkpoint_v2.json
+
+# Wandb
+wandb/
+paper/TODO.md

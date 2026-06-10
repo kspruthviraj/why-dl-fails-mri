@@ -1,0 +1,12 @@
+{
+  "n_spectra": 141,
+  "vendors": {
+    "GE": 67,
+    "Philips": 24,
+    "Siemens": 50
+  },
+  "n_points": 2,
+  "GE_vs_Philips_diff_pct": 100.0000000299737,
+  "GE_vs_Siemens_diff_pct": 27.714937724648088,
+  "Philips_vs_Siemens_diff_pct": 33991327414.21721
+}
