@@ -4,6 +4,8 @@
 
 Sreenath Kyathanahally
 
+**Paper:** [Zenodo](https://zenodo.org/records/20633543) | [ResearchGate](https://www.researchgate.net/publication/406889000_Why_Deep_Learning_Fails_Across_MRI_Vendors_A_Physics_Attribution_Study_with_Dose-Response_Curves_Scaling_Laws_and_Hybrid_Rescues)
+
 ---
 
 ## Abstract
@@ -28,7 +30,7 @@ We generate 100,000 synthetic MRF signals using Bloch-equation simulation, decom
 ```
 why-dl-fails-mri/
 ├── paper/
-│   ├── main.tex              # Full paper (16 pages)
+│   ├── main.tex              # Full paper source (16 pages)
 │   ├── references.bib        # 43 references
 │   └── figures/              # 10 figures (PDF + PNG)
 │       ├── fig1_b0_dose_response.pdf
@@ -60,7 +62,6 @@ why-dl-fails-mri/
 │   └── biggaba_validation.json
 ├── configs/
 │   └── config.yaml           # Central configuration
-├── why_dl_fails_mri_arxiv.tar.gz  # arXiv submission package (109 KB)
 ├── .gitignore
 └── README.md
 ```
@@ -108,19 +109,22 @@ All 26 experiments are checkpointed. If the process crashes, re-running the same
 | Fig 9 | t-SNE feature visualization (3 vendor clusters) |
 | Fig 10 | Uncertainty calibration (predicted vs actual) |
 
-## arXiv
-
-The arXiv submission package is included as `why_dl_fails_mri_arxiv.tar.gz` (109 KB). Upload it at https://arxiv.org/submit.
-
 ## Citation
 
 ```bibtex
 @article{kyathanahally2026why,
   title={Why Deep Learning Fails Across MRI Vendors: A Physics Attribution Study with Dose-Response Curves, Scaling Laws, and Hybrid Rescues},
   author={Kyathanahally, Sreenath},
-  year={2026}
+  year={2026},
+  doi={10.5281/zenodo.20633543},
+  url={https://zenodo.org/records/20633543}
 }
 ```
+
+**Links:**
+- Paper (PDF): https://zenodo.org/records/20633543
+- ResearchGate: https://www.researchgate.net/publication/406889000
+- Code: https://github.com/kspruthviraj/why-dl-fails-mri
 
 ## License
 

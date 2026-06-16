@@ -57,3 +57,6 @@ checkpoint_v2.json
 # Wandb
 wandb/
 paper/TODO.md
+*.tar.gz
+paper/*.pdf
+paper/main.pdf
