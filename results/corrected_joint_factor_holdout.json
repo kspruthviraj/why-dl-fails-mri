@@ -1,0 +1,150 @@
+{
+  "schema_version": "corrected-joint-factor-holdout-v1",
+  "protocol": {
+    "model": "same ResNet1D-18 configuration as corrected benchmark",
+    "algorithm": "ERM",
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "epochs": 15,
+    "source_definition": "all factorial acquisition combinations except the target cell",
+    "source_split": "80/20 by deterministic sample-ID permutation",
+    "target_scaler": "source training only",
+    "target_labels_used_for_training": false,
+    "target_labels_used_for_model_selection": false,
+    "target_combination_is_compositional": true,
+    "primary_metric": "absolute MAE in ms"
+  },
+  "result": {
+    "target_combination": {
+      "field_strength": 3.0,
+      "fa_variant": 2,
+      "tr_variant": 1
+    },
+    "n_total": 100000,
+    "n_source": 91667,
+    "n_train": 73333,
+    "n_validation": 18334,
+    "n_target": 8333,
+    "n_source_domains": 33,
+    "n_target_domains": 3,
+    "source_contains_each_target_level": {
+      "field_strength": true,
+      "fa_variant": true,
+      "tr_variant": true
+    },
+    "target_domains": [
+      "ge_fa2_tr1_3.0T",
+      "philips_fa2_tr1_3.0T",
+      "siemens_fa2_tr1_3.0T"
+    ],
+    "split_overlap": 0,
+    "sample_id_overlap": 0,
+    "records": [
+      {
+        "seed": 42,
+        "source": {
+          "mae": 130.59869384765625,
+          "rmse": 174.62399291992188,
+          "mae_t1": 146.1346893310547,
+          "mae_t2": 115.0627212524414,
+          "bias_t1": -5.259685516357422,
+          "bias_t2": 1.8376364707946777
+        },
+        "target": {
+          "mae": 150.95851135253906,
+          "rmse": 190.27825927734375,
+          "mae_t1": 186.53738403320312,
+          "mae_t2": 115.37965393066406,
+          "bias_t1": 176.79653930664062,
+          "bias_t2": 2.755584716796875
+        },
+        "ds3": 1.155896027020244,
+        "train_size": 73333,
+        "validation_size": 18334,
+        "target_size": 8333,
+        "target_labels_used_for_training": false,
+        "target_scaler_fit_on_source_only": true
+      },
+      {
+        "seed": 123,
+        "source": {
+          "mae": 130.8273468017578,
+          "rmse": 175.66477966308594,
+          "mae_t1": 146.5934600830078,
+          "mae_t2": 115.06121063232422,
+          "bias_t1": -12.948641777038574,
+          "bias_t2": 0.3278399109840393
+        },
+        "target": {
+          "mae": 149.35244750976562,
+          "rmse": 189.2441864013672,
+          "mae_t1": 183.1245880126953,
+          "mae_t2": 115.58033752441406,
+          "bias_t1": 173.8959503173828,
+          "bias_t2": 2.2355549335479736
+        },
+        "ds3": 1.1415996055937665,
+        "train_size": 73333,
+        "validation_size": 18334,
+        "target_size": 8333,
+        "target_labels_used_for_training": false,
+        "target_scaler_fit_on_source_only": true
+      },
+      {
+        "seed": 456,
+        "source": {
+          "mae": 131.78436279296875,
+          "rmse": 177.8199920654297,
+          "mae_t1": 148.2063446044922,
+          "mae_t2": 115.36238861083984,
+          "bias_t1": -7.551748752593994,
+          "bias_t2": 0.35537484288215637
+        },
+        "target": {
+          "mae": 150.3433380126953,
+          "rmse": 190.10504150390625,
+          "mae_t1": 184.97015380859375,
+          "mae_t2": 115.71653747558594,
+          "bias_t1": 175.0643768310547,
+          "bias_t2": 4.498264789581299
+        },
+        "ds3": 1.140828356463524,
+        "train_size": 73333,
+        "validation_size": 18334,
+        "target_size": 8333,
+        "target_labels_used_for_training": false,
+        "target_scaler_fit_on_source_only": true
+      }
+    ],
+    "summary": {
+      "source_mae": {
+        "mean": 131.07013448079428,
+        "sd": 0.629016776237762,
+        "n": 3
+      },
+      "target_mae": {
+        "mean": 150.21809895833334,
+        "sd": 0.8103233196194944,
+        "n": 3
+      },
+      "target_mae_t1": {
+        "mean": 184.87737528483072,
+        "sd": 1.7082886349362112,
+        "n": 3
+      },
+      "target_mae_t2": {
+        "mean": 115.55884297688802,
+        "sd": 0.16946723102061412,
+        "n": 3
+      },
+      "ds3": {
+        "mean": 1.1461079963591783,
+        "sd": 0.008485450163173399,
+        "n": 3
+      }
+    }
+  }
+}

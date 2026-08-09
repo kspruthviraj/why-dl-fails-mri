@@ -1,4 +1,4 @@
-# Data files (too large for git)
+# Data files (too large for git — see README_DATA.md for download commands)
 data/
 *.h5
 *.hdf5
@@ -18,6 +18,7 @@ build/
 
 # Virtual environments
 .venv/
+.venv_mrpro/
 .env/
 venv/
 
@@ -50,13 +51,21 @@ paper/*.pdf
 arxiv_upload/
 upload/
 
-# Checkpoints (keep JSON results)
-checkpoint.json
-checkpoint_v2.json
-
 # Wandb
 wandb/
+
+# Temp / drafts
 paper/TODO.md
 *.tar.gz
-paper/*.pdf
-paper/main.pdf
+
+# Experiment logs (append-only)
+results/experiment_log.txt
+
+# Local-only manuscript, review, and build artifacts
+/paper/
+/AUDIT.md
+/TODO.md
+/main.aux
+/main.log
+/main.out
+/main.pdf

@@ -1,0 +1,30 @@
+{
+  "schema_version": "external-mrf-package-v1",
+  "package_id": "replace-with-author-package-id",
+  "source_citation": "DOI, accession, or manuscript citation",
+  "license": "license-or-data-use-terms",
+  "sample_index": "samples.csv",
+  "expected_n_timepoints": 1000,
+  "external_evaluation_only": true,
+  "files": [
+    {
+      "path": "samples.csv",
+      "kind": "index",
+      "sha256": "replace-with-64-character-sha256"
+    },
+    {
+      "path": "fingerprints/example_scan.npy",
+      "kind": "complex_temporal_fingerprint",
+      "sha256": "replace-with-64-character-sha256"
+    }
+  ],
+  "data_contract": {
+    "raw_complex_fingerprints": true,
+    "exact_acquisition_schedule": true,
+    "independent_t1_t2_reference": true,
+    "scanner_vendor_site_metadata": true,
+    "scan_rescan_or_repeat": true,
+    "raw_metadata_export": true,
+    "b0_b1_maps": false
+  }
+}

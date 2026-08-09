@@ -1,121 +1,107 @@
-# Why Deep Learning Fails Across MRI Vendors
+# Physics-structured domain shift in quantitative MRI
 
-**A Physics Attribution Study with Dose-Response Curves, Scaling Laws, and Hybrid Rescues**
+This repository studies cross-vendor generalization for quantitative MRI (qMRI)
+parameter estimation. The authoritative pipeline is the corrected benchmark in
+`scripts/run_corrected_benchmark.py`.
 
-Sreenath Kyathanahally
+## Scientific status
 
-**Paper:** [Zenodo](https://zenodo.org/records/20633543) | [ResearchGate](https://www.researchgate.net/publication/406889000_Why_Deep_Learning_Fails_Across_MRI_Vendors_A_Physics_Attribution_Study_with_Dose-Response_Curves_Scaling_Laws_and_Hybrid_Rescues)
+The first draft contained a repeated-seed bug that made many nominally
+independent samples identical. Those artifacts are retained only for
+provenance. They are not evidence and are not used by the corrected pipeline.
 
----
+The corrected benchmark provides:
 
-## Abstract
+- 100,000 independently seeded MRF signals with sample IDs and physical
+  metadata;
+- exact signal-duplicate checks before training;
+- leave-one-vendor-out evaluation;
+- two source vendors during training and a third vendor held out;
+- train-only target scaling and source-validation-only hybrid/uncertainty
+  calibration;
+- ERM, CORAL, GroupDRO, DANN, IRM, and VREx baselines with real source-environment labels;
+- paired counterfactual B0/B1/SNR experiments, single-factor holdouts, and
+  a compositional unseen-acquisition-combination holdout;
+- paired representation analysis and an absolute-error scaling curve;
+- optional raw cardiac-MRF phantom validation against independent reference maps.
 
-When a deep learning model for quantitative MRI (qMRI) is trained on one scanner vendor and deployed on another, it often fails dramatically. But *why* does it fail? We build a framework to isolate each physical factor and measure exactly how much damage it causes to deep learning-based parameter estimation.
+The benchmark reports absolute held-out-vendor MAE first. DS3 is secondary because
+it can become large when source error is small.
 
-We generate 100,000 synthetic MRF signals using Bloch-equation simulation, decompose vendor shift into 9 isolated physical corruptions, and test 4 robustness algorithms (ERM, DeepCORAL, GroupDRO, IRM) across 2 architectures (ResNet-1D, ViT-1D). We validate on real multi-scanner MRF data (30 brain scans across 3 scanners).
+## Reproduction
 
-## Key Findings
-
-| # | Finding | Evidence |
-|---|---------|----------|
-| 1 | **B₀ inhomogeneity is the dominant corruption** | Non-monotonic dose-response, worst at 25 Hz |
-| 2 | **Peak normalization masks B₁⁺ sensitivity** | Without it, halving B₁ causes 39% error increase |
-| 3 | **All standard robustness algorithms fail** | DS3 = 39–58×; IRM fails entirely |
-| 4 | **Data scaling cannot overcome uncalibrated physics** | More source data does not improve OOD performance |
-| 5 | **Hybrid (DL + dictionary) outperforms both** | 193 ms vs 224 ms (DL) and 247 ms (classical) |
-| 6 | **Real multi-scanner data confirms T₂ > T₁ variability** | T₂ is 3.5× more variable across scanners |
-
-## Repository Structure
-
-```
-why-dl-fails-mri/
-├── paper/
-│   ├── main.tex              # Full paper source (16 pages)
-│   ├── references.bib        # 43 references
-│   └── figures/              # 10 figures (PDF + PNG)
-├── qMR_Robust/
-│   ├── algorithms/           # ERM, CORAL, GroupDRO, IRM, DANN, VREx
-│   ├── baselines/            # Dictionary matching, basis-set fitting
-│   ├── data_loaders/         # BigGABA & cMRF dataset loaders
-│   ├── eval/                 # MAE, RMSE, CKA, ECE, DS3 metrics
-│   ├── experiments/          # Physics attribution, scaling laws, etc.
-│   ├── models/               # ResNet-1D, ViT-1D
-│   └── simulators/           # Bloch-equation MRF/MRS simulation
-├── scripts/
-│   ├── run_full_benchmark.py # Main experiment runner (checkpointed)
-│   └── run_v2_experiments.py # Extended experiments (B0 dose-response, etc.)
-├── results/
-│   ├── all_results.json      # Combined experiment results
-│   ├── experiment_results_final.json
-│   ├── phantom_validation.json
-│   ├── real_data_validation.json
-│   └── biggaba_validation.json
-├── configs/
-│   └── config.yaml           # Central configuration
-├── .gitignore
-└── README.md
-```
-
-## Installation
+From the repository root:
 
 ```bash
-pip install torch numpy scipy h5py nibabel scikit-learn einops pyyaml tqdm matplotlib
+bash reproduce.sh
 ```
 
-## Quick Start
+The script generates `data/synthetic/mrf_corrected_100k.h5` if necessary,
+validates it, runs the corrected benchmark, checks the results, and regenerates
+the figures. To run only integrity checks:
+
+bash reproduce.sh verify
+
+To run the held-out acquisition-factor stress test:
+
+bash reproduce.sh factor_holdout
+
+To run the compositional unseen-acquisition-combination holdout:
+
+bash reproduce.sh joint_factor_holdout
+
+To generate paired method effects from an existing benchmark:
+
+bash reproduce.sh method_effects
+
+Dependencies are already installed on the development machine. Set
+`MRF_INSTALL_DEPS=1` only when a fresh environment needs installation. The
+optional external raw-MRF stage uses an isolated MRpro environment and is run
+with `MRPRO_PYTHON=.venv_mrpro/bin/python bash reproduce.sh external`.
+
+Useful controls:
 
 ```bash
-# Generate 100k synthetic MRF signals
-PYTHONPATH=. python -m qMR_Robust.simulators.manager --config configs/config.yaml --modality mrf
-
-# Run all experiments (resumable — saves checkpoint after each)
-PYTHONPATH=. python scripts/run_full_benchmark.py
+MRF_EPOCHS=15 MRF_SEEDS=42,123,456 bash reproduce.sh
+MRF_ALGOS=erm,coral,groupdro,dann,irm,vrex MRF_SKIP_SCALING=1 bash reproduce.sh
 ```
 
-## Data
+## Data and outputs
 
-| Dataset | Source | Size | Usage |
-|---------|--------|------|-------|
-| Synthetic MRF (100k) | Generated by Bloch simulator | ~2 GB | Training + physics attribution |
-| Real MRF Multi-Scanner | [Zhao & Ma, Zenodo 8234101](https://doi.org/10.5281/zenodo.8234101) | 3.8 GB | Real validation (30 brain scans, 3 scanners) |
-| BigGABA MRS | [Mikkelsen et al., NeuroImage 2017](https://pubmed.ncbi.nlm.nih.gov/28716717/) | ~500 MB | MRS cross-vendor validation (141 spectra, 3 vendors) |
+- Corrected synthetic data: `data/synthetic/mrf_corrected_100k.h5`
+- Dataset integrity report: `results/data_validation.json`
+- Corrected benchmark: `results/corrected_benchmark.json`
+- Independent checks: scripts/verify_paper.py
+- External package intake: scripts/validate_external_package.py
+- Figures: paper/figures/
 
-## Reproducibility
+The real Zhao--Ma multi-scanner data are used only for map-level
+scan-rescan/scanner reproducibility analysis; they are not used to train the
+synthetic model and do not provide raw temporal MRF fingerprints or voxelwise
+ground truth. Before evaluating any author-supplied package, read
+docs/external_validation_protocol.md and run:
+bash reproduce.sh validate_external
 
-All 26 experiments are checkpointed. If the process crashes, re-running the same script resumes from the last completed experiment.
+## Scope and limitations
 
-## Figures
+This is a controlled simulator benchmark, not a clinical validation study.
+The scalar Bloch forward model is useful for attribution experiments but is not
+a substitute for sequence-accurate Bloch simulation, phantom measurements, or
+prospective multi-vendor validation. The paper therefore avoids claims that all
+domain-generalization methods fail universally, that synthetic tissue labels
+demonstrate clinical harm, or that map-level scanner variation proves model
+accuracy.
 
-| Figure | Content |
-|--------|---------|
-| Fig 1 | B₀ dose-response curve (non-monotonic, peak at 25 Hz) |
-| Fig 2 | SNR dose-response curve (monotonic) |
-| Fig 3 | Physics attribution bar chart (9 corruptions) |
-| Fig 4 | Algorithm comparison (source vs OOD) |
-| Fig 5 | Scaling law (source improves, OOD flat) |
-| Fig 6 | B₁⁺ ablation (with vs without peak normalization) |
-| Fig 7 | Hybrid comparison (neural vs dict vs hybrid) |
-| Fig 8 | CKA heatmap (within-vendor ≈ between-vendor) |
-| Fig 9 | t-SNE feature visualization (3 vendor clusters) |
-| Fig 10 | Uncertainty calibration (predicted vs actual) |
 
-## Citation
+## Additional public-data audits
 
-```bibtex
-@article{kyathanahally2026why,
-  title={Why Deep Learning Fails Across MRI Vendors: A Physics Attribution Study with Dose-Response Curves, Scaling Laws, and Hybrid Rescues},
-  author={Kyathanahally, Sreenath},
-  year={2026},
-  doi={10.5281/zenodo.20633543},
-  url={https://zenodo.org/records/20633543}
-}
-```
+The optional analytical validation now includes a four-scanner cMRF release
+with independent raw spin-echo reference scans. Run it with:
 
-**Links:**
-- Paper (PDF): https://zenodo.org/records/20633543
-- ResearchGate: https://www.researchgate.net/publication/406889000
-- Code: https://github.com/kspruthviraj/why-dl-fails-mri
+    MRPRO_PYTHON=.venv_mrpro/bin/python \
+    MRPRO_SRC=data/external/mrpro_cmrf/src \
+    bash reproduce.sh external_multi
 
-## License
-
-MIT License
+The downloaded VENUS summary is audited separately by
+scripts/audit_venus_summary.py. It is contextual qMRI shift evidence only and
+is intentionally excluded from neural training and the primary MRF endpoint.

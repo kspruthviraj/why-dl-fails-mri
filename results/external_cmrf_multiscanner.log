@@ -1,0 +1,497 @@
+Using 22988 EPG dictionary entries, 4 scanner(s), chunk=2000
+Scanner 1: reconstructing reference scans
+Scanner 1: reconstructing cMRF
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+  dictionary 2000/22988
+  dictionary 4000/22988
+  dictionary 6000/22988
+  dictionary 8000/22988
+  dictionary 10000/22988
+  dictionary 12000/22988
+  dictionary 14000/22988
+  dictionary 16000/22988
+  dictionary 18000/22988
+  dictionary 20000/22988
+  dictionary 22000/22988
+  dictionary 22988/22988
+Scanner 2: reconstructing reference scans
+Scanner 2: reconstructing cMRF
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+  dictionary 2000/22988
+  dictionary 4000/22988
+  dictionary 6000/22988
+  dictionary 8000/22988
+  dictionary 10000/22988
+  dictionary 12000/22988
+  dictionary 14000/22988
+  dictionary 16000/22988
+  dictionary 18000/22988
+  dictionary 20000/22988
+  dictionary 22000/22988
+  dictionary 22988/22988
+Scanner 3: reconstructing reference scans
+Scanner 3: reconstructing cMRF
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+  dictionary 2000/22988
+  dictionary 4000/22988
+  dictionary 6000/22988
+  dictionary 8000/22988
+  dictionary 10000/22988
+  dictionary 12000/22988
+  dictionary 14000/22988
+  dictionary 16000/22988
+  dictionary 18000/22988
+  dictionary 20000/22988
+  dictionary 22000/22988
+  dictionary 22988/22988
+Scanner 4: reconstructing reference scans
+Scanner 4: reconstructing cMRF
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+/home/sreenath/research-space/MR_domain_shift/.venv_mrpro/lib/python3.12/site-packages/finufft/_interfaces.py:427: UserWarning: Argument `data` does not satisfy the following requirement: C. Copying array (this may reduce performance)
+  warnings.warn(f"Argument `{name}` does not satisfy the following requirement: {prop}. Copying array (this may reduce performance)")
+  dictionary 2000/22988
+  dictionary 4000/22988
+  dictionary 6000/22988
+  dictionary 8000/22988
+  dictionary 10000/22988
+  dictionary 12000/22988
+  dictionary 14000/22988
+  dictionary 16000/22988
+  dictionary 18000/22988
+  dictionary 20000/22988
+  dictionary 22000/22988
+  dictionary 22988/22988
+{
+  "output": "results/external_cmrf_multiscanner.json",
+  "aggregate": {
+    "t1": {
+      "pooled_tube_mean_metrics_ms": {
+        "n": 36,
+        "mae": 14.421048482259115,
+        "rmse": 19.63723176035319,
+        "mean_bias": 8.953771803114149,
+        "bias_sd": 17.725067238617545,
+        "bland_altman_lower": -25.787359984576234,
+        "bland_altman_upper": 43.694903590804536,
+        "pearson_r": 0.9994543590072195,
+        "r_squared": 0.9983839446534487
+      },
+      "scanner_mae_ms": {
+        "mean": 14.421048482259115,
+        "sd": 1.7043454263731024,
+        "min": 12.607031928168404,
+        "max": 16.349314371744793
+      },
+      "scanner_bias_ms": {
+        "mean": 8.953771803114149,
+        "sd": 6.483292624024698
+      }
+    },
+    "t2": {
+      "pooled_tube_mean_metrics_ms": {
+        "n": 36,
+        "mae": 3.3176883591545954,
+        "rmse": 4.119305446362454,
+        "mean_bias": 0.38173649046156144,
+        "bias_sd": 4.159760865524201,
+        "bland_altman_lower": -7.771394805965873,
+        "bland_altman_upper": 8.534867786888995,
+        "pearson_r": 0.9973721676170589,
+        "r_squared": 0.9941888396464128
+      },
+      "scanner_mae_ms": {
+        "mean": 3.3176883591545954,
+        "sd": 1.003332174787215,
+        "min": 2.079005347357856,
+        "max": 4.438313802083333
+      },
+      "scanner_bias_ms": {
+        "mean": 0.38173649046156133,
+        "sd": 2.76594045649447
+      }
+    },
+    "n_scanners": 4,
+    "n_tubes_per_scanner": 9,
+    "n_tube_means": 36
+  },
+  "scanner_metrics": [
+    {
+      "scanner": "scanner1",
+      "platform": "MAGNETOM Cima.X",
+      "t1_mae": 12.607031928168404,
+      "t2_mae": 3.7105738321940103
+    },
+    {
+      "scanner": "scanner2",
+      "platform": "MAGNETOM Skyra",
+      "t1_mae": 16.349314371744793,
+      "t2_mae": 4.438313802083333
+    },
+    {
+      "scanner": "scanner3",
+      "platform": "MAGNETOM Lumina",
+      "t1_mae": 15.285603841145834,
+      "t2_mae": 3.0428604549831815
+    },
+    {
+      "scanner": "scanner4",
+      "platform": "Skyra_fit",
+      "t1_mae": 13.44224378797743,
+      "t2_mae": 2.079005347357856
+    }
+  ]
+}

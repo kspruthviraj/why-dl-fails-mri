@@ -13,6 +13,7 @@ cMRFDataset so the rest of the pipeline is format-agnostic.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import logging
 import math
 import multiprocessing as mp
@@ -32,9 +33,14 @@ logger = logging.getLogger(__name__)
 # ──────────────────────────────────────────────────────────────────────────────
 
 VENDOR_BIAS = {
-    "siemens": {"b0_hz": 0.0, "b1_scale": 1.00, "noise_scale": 1.00},
-    "philips": {"b0_hz": 5.0, "b1_scale": 0.95, "noise_scale": 1.10},
-    "ge":      {"b0_hz": -3.0, "b1_scale": 1.05, "noise_scale": 1.20},
+    # Explicit, versioned simulator parameters. Labels remain the unperturbed
+    # tissue values; vendor profiles alter only the forward model.
+    "siemens": {"b0_hz": 0.0, "b1_scale": 1.00, "noise_scale": 1.00,
+                "t1_scale": 1.00, "t2_scale": 1.00},
+    "philips": {"b0_hz": 5.0, "b1_scale": 0.95, "noise_scale": 1.10,
+                "t1_scale": 1.03, "t2_scale": 0.97},
+    "ge":      {"b0_hz": -3.0, "b1_scale": 1.05, "noise_scale": 1.20,
+                "t1_scale": 0.97, "t2_scale": 1.05},
 }
 
 FIELD_FACTORS = {
@@ -87,26 +93,36 @@ def bloch_simulate(
     fa: np.ndarray, tr: np.ndarray,
     b0_shift: float, b1_scale: float, n: int,
 ) -> np.ndarray:
-    """Simplified Bloch simulation for MRF dictionary generation."""
+    """Generate a deterministic scalar Bloch-style MRF fingerprint.
+
+    Relaxation quantities and TR/TE are both expressed in milliseconds. The
+    off-resonance phase accumulates with elapsed sequence time; the previous
+    implementation applied one constant phase to every time point.
+    """
     signal = np.zeros(n, dtype=np.complex128)
     mz = m0
     fa_rad = np.deg2rad(fa) * b1_scale
     e1 = np.exp(-tr / max(t1, 1e-6))
     te = 2.0
     e2_te = np.exp(-te / max(t2, 1e-6))
-    b0_phase = np.exp(1j * 2 * np.pi * b0_shift * te / 1000.0)
+    elapsed_ms = 0.0
 
     for i in range(n):
         mz_pre = mz
         mz = mz_pre * np.cos(fa_rad[i])
-        mxy = mz_pre * np.sin(fa_rad[i]) * e2_te * b0_phase
+        phase = np.exp(1j * 2 * np.pi * b0_shift * (elapsed_ms + te) / 1000.0)
+        mxy = mz_pre * np.sin(fa_rad[i]) * e2_te * phase
         mz = mz * e1[i] + m0 * (1 - e1[i])
         signal[i] = mxy
+        elapsed_ms += float(tr[i])
     return signal
 
 
 def _generate_mrf_sample(
     seed: int, cfg: dict, vendor: str, field: float, fa_var: int, tr_var: int,
+    b0_override: Optional[float] = None,
+    b1_override: Optional[float] = None,
+    snr_override: Optional[float] = None,
 ) -> Dict[str, Any]:
     """Generate one MRF sample — designed to be called from a worker process."""
     rng = np.random.RandomState(seed)
@@ -118,21 +134,26 @@ def _generate_mrf_sample(
 
     ff = FIELD_FACTORS[field]
     vb = VENDOR_BIAS[vendor]
-    t1_s = t1 * ff["t1_scale"]
-    t2_s = t2 * ff["t2_scale"]
+    t1_s = t1 * ff["t1_scale"] * vb["t1_scale"]
+    t2_s = t2 * ff["t2_scale"] * vb["t2_scale"]
 
     n = vr.get("n_timepoints", 1000)
     fa = _generate_fa_schedule(fa_var, n, rng)
     tr = _generate_tr_schedule(tr_var, n, rng)
 
-    b0 = vb["b0_hz"] + rng.uniform(*vr["b0_shift_range"])
-    b1 = vb["b1_scale"] * rng.uniform(*vr["b1_scale_range"])
+    # Always draw the original random values so counterfactual overrides use
+    # exactly the same latent tissue, schedule, and noise stream.
+    b0_draw = vb["b0_hz"] + rng.uniform(*vr["b0_shift_range"])
+    b1_draw = vb["b1_scale"] * rng.uniform(*vr["b1_scale_range"])
+    snr_draw = rng.uniform(*vr["snr_range"]) * ff["snr_scale"]
+    b0 = float(b0_draw if b0_override is None else b0_override)
+    b1 = float(b1_draw if b1_override is None else b1_override)
 
     sig = bloch_simulate(t1_s, t2_s, m0, fa, tr, b0, b1, n)
 
-    snr = rng.uniform(*vr["snr_range"]) * ff["snr_scale"]
+    snr = float(snr_draw if snr_override is None else snr_override)
     noise_std = np.abs(sig).max() / max(snr, 1.0)
-    noise = (rng.randn(n) + 1j * rng.randn(n)) * noise_std
+    noise = (rng.randn(n) + 1j * rng.randn(n)) * noise_std * vb["noise_scale"]
     sig = (sig + noise).astype(np.complex64)
 
     domain_name = f"{vendor}_fa{fa_var}_tr{tr_var}_{field}T"
@@ -142,6 +163,11 @@ def _generate_mrf_sample(
         "domain_name": domain_name,
         "vendor": vendor,
         "field_strength": field,
+        "b0_hz": float(b0),
+        "b1_scale": float(b1),
+        "snr": float(snr),
+        "fa_variant": int(fa_var),
+        "tr_variant": int(tr_var),
     }
 
 
@@ -237,8 +263,7 @@ class SimulationManager:
 
         combos = [(v, f, fa, tr) for v in vendors for f in fields
                   for fa in range(fa_vars) for tr in range(tr_vars)]
-        per_combo = max(1, n // len(combos))
-        total = per_combo * len(combos)
+        total = int(n)
         n_time = mc.get("n_timepoints", 1000)
 
         logger.info("Generating %d MRF signals across %d domains …", total, len(combos))
@@ -246,10 +271,9 @@ class SimulationManager:
         out = Path(output_path)
         out.parent.mkdir(parents=True, exist_ok=True)
 
-        tasks = []
-        for v, f, fa, tr in combos:
-            for _ in range(per_combo):
-                tasks.append((v, f, fa, tr))
+        # Round-robin assignment keeps every domain balanced and gives every
+        # sample a unique global index for deterministic seeding.
+        tasks = [(i, *combos[i % len(combos)]) for i in range(total)]
 
         worker_fn = partial(
             _mrf_worker,
@@ -268,6 +292,13 @@ class SimulationManager:
             dom_ds = hf.create_dataset(
                 "domain_labels", shape=(total,), dtype="S64",
             )
+            sample_id_ds = hf.create_dataset("sample_ids", shape=(total,), dtype=np.int64)
+            b0_ds = hf.create_dataset("b0_hz", shape=(total,), dtype=np.float32)
+            b1_ds = hf.create_dataset("b1_scale", shape=(total,), dtype=np.float32)
+            snr_ds = hf.create_dataset("snr", shape=(total,), dtype=np.float32)
+            field_ds = hf.create_dataset("field_strength", shape=(total,), dtype=np.float32)
+            fa_ds = hf.create_dataset("fa_variant", shape=(total,), dtype=np.int16)
+            tr_ds = hf.create_dataset("tr_variant", shape=(total,), dtype=np.int16)
 
             if self.n_workers > 1:
                 ctx = mp.get_context("spawn")
@@ -279,18 +310,34 @@ class SimulationManager:
                         sig_ds[i] = result["signal"]
                         param_ds[i] = result["params"]
                         dom_ds[i] = result["domain_name"].encode()
+                        sample_id_ds[i] = result["sample_id"]
+                        b0_ds[i] = result["b0_hz"]
+                        b1_ds[i] = result["b1_scale"]
+                        snr_ds[i] = result["snr"]
+                        field_ds[i] = result["field_strength"]
+                        fa_ds[i] = result["fa_variant"]
+                        tr_ds[i] = result["tr_variant"]
             else:
                 for i, task in enumerate(tqdm(tasks, desc="MRF")):
-                    result = _mrf_worker(task, self.sim_cfg, self.seed + i)
+                    result = _mrf_worker(task, self.sim_cfg, self.seed)
                     sig_ds[i] = result["signal"]
                     param_ds[i] = result["params"]
                     dom_ds[i] = result["domain_name"].encode()
+                    sample_id_ds[i] = result["sample_id"]
+                    b0_ds[i] = result["b0_hz"]
+                    b1_ds[i] = result["b1_scale"]
+                    snr_ds[i] = result["snr"]
+                    field_ds[i] = result["field_strength"]
+                    fa_ds[i] = result["fa_variant"]
+                    tr_ds[i] = result["tr_variant"]
 
             hf.attrs["n_signals"] = total
             hf.attrs["n_domains"] = len(combos)
             hf.attrs["n_timepoints"] = n_time
             hf.attrs["vendors"] = vendors
             hf.attrs["field_strengths"] = fields
+            hf.attrs["seed_scheme"] = "sha256(base_seed, sample_id, domain)"
+            hf.attrs["simulator_version"] = "mrf-forward-v2"
 
         logger.info("MRF dictionary saved → %s  (%d signals)", out, total)
         return str(out)
@@ -314,10 +361,7 @@ class SimulationManager:
         out = Path(output_path)
         out.parent.mkdir(parents=True, exist_ok=True)
 
-        tasks = []
-        for te in te_values:
-            for _ in range(per_te):
-                tasks.append(te)
+        tasks = [(i, te_values[i % len(te_values)]) for i in range(total)]
 
         worker_fn = partial(_mrs_worker, cfg=self.sim_cfg, base_seed=self.seed)
 
@@ -345,7 +389,7 @@ class SimulationManager:
                         dom_ds[i] = result["domain_name"].encode()
             else:
                 for i, te_val in enumerate(tqdm(tasks, desc="MRS")):
-                    result = _mrs_worker(te_val, self.sim_cfg, self.seed + i)
+                    result = _mrs_worker(te_val, self.sim_cfg, self.seed)
                     spec_ds[i] = result["signal"]
                     conc_ds[i] = result["concentrations"]
                     dom_ds[i] = result["domain_name"].encode()
@@ -398,15 +442,27 @@ class SimulationManager:
 
 # ── top-level picklable functions for mp.Pool ─────────────────────────────────
 
+def _stable_seed(*parts: Any) -> int:
+    """Return a process-independent 31-bit seed."""
+    payload = "|".join(map(str, parts)).encode("utf-8")
+    digest = hashlib.sha256(payload).digest()
+    return int.from_bytes(digest[:8], "little") % (2**31 - 1)
+
+
 def _mrf_worker(task, cfg, base_seed):
-    v, f, fa, tr = task
-    seed = base_seed ^ hash((v, f, fa, tr)) % (2**31)
-    return _generate_mrf_sample(seed, cfg, v, f, fa, tr)
+    sample_id, v, f, fa, tr = task
+    seed = _stable_seed(base_seed, "mrf", sample_id, v, f, fa, tr)
+    result = _generate_mrf_sample(seed, cfg, v, f, fa, tr)
+    result["sample_id"] = int(sample_id)
+    return result
 
 
-def _mrs_worker(te, cfg, base_seed):
-    seed = base_seed ^ hash(te) % (2**31)
-    return _generate_mrs_sample(seed, cfg, te)
+def _mrs_worker(task, cfg, base_seed):
+    sample_id, te = task
+    seed = _stable_seed(base_seed, "mrs", sample_id, te)
+    result = _generate_mrs_sample(seed, cfg, te)
+    result["sample_id"] = int(sample_id)
+    return result
 
 
 # ── CLI entry-point ───────────────────────────────────────────────────────────

@@ -46,27 +46,42 @@ class GroupDRO(AlgorithmBase):
         pred = self.backbone(signal)
         per_sample_loss = self.loss_fn(pred, target).mean(dim=-1)
 
-        unique = domain.unique()
-        domain_losses = torch.zeros(self.n_domains, device=self.device)
+        unique = domain.unique(sorted=True)
+        present_losses = []
+        present_indices = []
         for d in unique:
             d_int = int(d.item()) if isinstance(d, Tensor) else int(d)
             mask = domain == d
             if mask.sum() > 0:
-                domain_losses[d_int] = per_sample_loss[mask].mean()
+                present_indices.append(d_int)
+                present_losses.append(per_sample_loss[mask].mean())
 
-        # Exponential reweighting
+        if not present_losses:
+            pred_loss = per_sample_loss.mean()
+            return {
+                "loss": pred_loss,
+                "pred_loss": pred_loss,
+                "penalty": torch.tensor(0.0, device=self.device),
+            }
+
+        losses = torch.stack(present_losses)
+        indices = torch.tensor(present_indices, device=self.device, dtype=torch.long)
+
+        # Update and renormalize only groups represented in this batch. This
+        # prevents absent environments from silently diluting the objective.
         with torch.no_grad():
-            loss_vals = domain_losses.detach()
-            self.group_weights = self.group_weights * torch.exp(
-                torch.tensor(self.eta, device=self.device) * loss_vals
+            self.group_weights[indices] *= torch.exp(
+                torch.tensor(self.eta, device=self.device) * losses.detach()
             )
-            self.group_weights = self.group_weights / self.group_weights.sum()
+            self.group_weights /= self.group_weights.sum()
 
-        weighted_loss = (self.group_weights * domain_losses).sum()
+        batch_weights = self.group_weights[indices]
+        batch_weights = batch_weights / batch_weights.sum().clamp_min(1e-8)
+        weighted_loss = (batch_weights * losses).sum()
 
         pred_loss = per_sample_loss.mean()
         return {
             "loss": weighted_loss,
             "pred_loss": pred_loss,
-            "penalty": domain_losses.max() - domain_losses.min(),
+            "penalty": losses.max() - losses.min(),
         }

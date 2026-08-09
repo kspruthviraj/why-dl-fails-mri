@@ -1,0 +1,17 @@
+{
+  "philips": {
+    "dl_only": 245.58920288085938,
+    "dict_only": 251.3729705810547,
+    "static_hybrid": 200.70631408691406,
+    "dynamic_hybrid": 251.3721160888672,
+    "static_alpha": 0.6352858543395996,
+    "dynamic_alpha_mean": 7.3059472924796864e-06,
+    "dynamic_alpha_std": 1.7156649846583605e-05
+  },
+  "ge": {
+    "dl_only": 253.55548095703125,
+    "dict_only": 242.5985870361328,
+    "dynamic_hybrid": 242.5977325439453,
+    "dynamic_alpha_mean": 7.2080811150954105e-06
+  }
+}

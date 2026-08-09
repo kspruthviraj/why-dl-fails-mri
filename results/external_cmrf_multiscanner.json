@@ -1,0 +1,1428 @@
+{
+  "schema_version": "external-cmrf-multiscanner-v1",
+  "provenance": {
+    "dataset": "Open-Source Cardiac MR Fingerprinting scanner comparison",
+    "zenodo_record": "14251660",
+    "expanded_record": "15831511",
+    "doi": "10.5281/zenodo.14251660",
+    "package_file": "data/external/cmrf_comparison/open_source_cmrf_scanner_comparison.zip",
+    "package_md5": "66b84132b4d3d7e6ca1b69b767418c2c",
+    "implementation": "https://github.com/PTB-MR/cMRF",
+    "mrpro_source": "https://github.com/PTB-MR/mrpro/tree/cMRF",
+    "mrpro_version": "0.260420",
+    "python_version": "3.12.3",
+    "torch_version": "2.12.0+cu130",
+    "dictionary_chunk": 2000,
+    "units": "milliseconds"
+  },
+  "task": {
+    "description": "Analytical cMRF reconstruction versus independently reconstructed spin-echo T1/T2 reference scans",
+    "model_training_performed": false,
+    "neural_benchmark_tuning_performed": false,
+    "target_labels_used": false,
+    "reference_scans_used_for_dictionary_or_training": false,
+    "reference_scans_used_only_for_final_evaluation": true,
+    "clinical_inference_performed": false
+  },
+  "scanners": [
+    {
+      "scanner": "scanner1",
+      "platform": "MAGNETOM Cima.X",
+      "metadata": {
+        "scanner_directory": "scanner1",
+        "vendor": "Siemens",
+        "model": "MAGNETOM Cima.X",
+        "protocol_name": "pulseq_cMRF_fov128_128px",
+        "field_strength_t_approx": 2.8948160274326513,
+        "reconstruction_matrix": [
+          1,
+          128,
+          128
+        ],
+        "cMRF_input_shape": [
+          1,
+          16,
+          1,
+          705,
+          355
+        ],
+        "cMRF_md5": "3877c02fc42066d9ea8678075edba1c6",
+        "ref_t1_md5": "1545d0dba81d5b9613f333ee4277be00",
+        "ref_t2_md5": "e5553c464f947c7decedbe7c53e6c4e2",
+        "mask_md5": "2466688e183d940f1a3c4373d4854ba1"
+      },
+      "reference_reconstruction": {
+        "t1_raw_shape": [
+          7,
+          16,
+          1,
+          128,
+          128
+        ],
+        "t2_raw_shape": [
+          5,
+          16,
+          1,
+          128,
+          128
+        ],
+        "t1_reconstruction_shape": [
+          7,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t2_reconstruction_shape": [
+          5,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t1_echo_or_inversion_times_ms": [
+          25,
+          50,
+          300,
+          600,
+          1200,
+          2400,
+          4800
+        ],
+        "t2_echo_times_ms": [
+          24.0,
+          50.0,
+          100.0,
+          200.0,
+          400.0
+        ]
+      },
+      "cmrf_reconstruction": {
+        "raw_shape": [
+          1,
+          16,
+          1,
+          705,
+          355
+        ],
+        "dynamic_index_shape": [
+          45,
+          20
+        ],
+        "reconstruction_shape": [
+          45,
+          128,
+          128
+        ],
+        "n_acquisitions": 705,
+        "n_receiver_channels": 16,
+        "n_windows": 45,
+        "n_acq_per_block": 47,
+        "n_acq_per_image": 20,
+        "window_overlap": 10,
+        "dictionary_entries": 22988,
+        "finite_reconstruction": true,
+        "finite_t1": true,
+        "finite_t2": true
+      },
+      "t1": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 203,
+            "predicted_mean_ms": 1008.472900390625,
+            "reference_mean_ms": 1022.16748046875,
+            "mean_bias_ms": -13.694581031799316,
+            "voxel_mae_ms": 45.02463054187192,
+            "voxel_rmse_ms": 56.77715491460491
+          },
+          {
+            "tube": 2,
+            "n_voxels": 198,
+            "predicted_mean_ms": 343.6363525390625,
+            "reference_mean_ms": 336.3131408691406,
+            "mean_bias_ms": 7.323232173919678,
+            "voxel_mae_ms": 15.505050505050505,
+            "voxel_rmse_ms": 18.491057079550426
+          },
+          {
+            "tube": 3,
+            "n_voxels": 198,
+            "predicted_mean_ms": 287.1212158203125,
+            "reference_mean_ms": 287.97979736328125,
+            "mean_bias_ms": -0.8585858345031738,
+            "voxel_mae_ms": 6.616161616161616,
+            "voxel_rmse_ms": 9.293203772845851
+          },
+          {
+            "tube": 4,
+            "n_voxels": 200,
+            "predicted_mean_ms": 1335.949951171875,
+            "reference_mean_ms": 1379.550048828125,
+            "mean_bias_ms": -43.599998474121094,
+            "voxel_mae_ms": 77.9,
+            "voxel_rmse_ms": 93.90420650854784
+          },
+          {
+            "tube": 5,
+            "n_voxels": 202,
+            "predicted_mean_ms": 444.6039733886719,
+            "reference_mean_ms": 430.59405517578125,
+            "mean_bias_ms": 14.00990104675293,
+            "voxel_mae_ms": 18.762376237623762,
+            "voxel_rmse_ms": 24.220521533739454
+          },
+          {
+            "tube": 6,
+            "n_voxels": 205,
+            "predicted_mean_ms": 438.43902587890625,
+            "reference_mean_ms": 430.7804870605469,
+            "mean_bias_ms": 7.658536434173584,
+            "voxel_mae_ms": 14.292682926829269,
+            "voxel_rmse_ms": 18.59714113880371
+          },
+          {
+            "tube": 7,
+            "n_voxels": 201,
+            "predicted_mean_ms": 1763.7313232421875,
+            "reference_mean_ms": 1755.273681640625,
+            "mean_bias_ms": 8.457711219787598,
+            "voxel_mae_ms": 51.14427860696517,
+            "voxel_rmse_ms": 63.481105427273846
+          },
+          {
+            "tube": 8,
+            "n_voxels": 201,
+            "predicted_mean_ms": 566.616943359375,
+            "reference_mean_ms": 557.512451171875,
+            "mean_bias_ms": 9.104477882385254,
+            "voxel_mae_ms": 25.82089552238806,
+            "voxel_rmse_ms": 30.656173848425308
+          },
+          {
+            "tube": 9,
+            "n_voxels": 201,
+            "predicted_mean_ms": 589.4030151367188,
+            "reference_mean_ms": 580.6467895507812,
+            "mean_bias_ms": 8.756218910217285,
+            "voxel_mae_ms": 19.502487562189053,
+            "voxel_rmse_ms": 25.490218590296447
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 12.607031928168404,
+          "rmse": 17.090941790927598,
+          "mean_bias": -0.3159145779079861,
+          "bias_sd": 18.124584145308912,
+          "bland_altman_lower": -35.84009950271346,
+          "bland_altman_upper": 35.20827034689748,
+          "pearson_r": 0.9995065272713812,
+          "r_squared": 0.998768739284569
+        },
+        "voxel_metrics_ms": {
+          "n": 1809,
+          "mae": 30.519624101713653,
+          "rmse": 45.96306830950849,
+          "mean_bias": -0.29297954671089,
+          "bias_sd": 45.97484354951944,
+          "bland_altman_lower": -90.403672903769,
+          "bland_altman_upper": 89.81771381034721,
+          "pearson_r": 0.9955663731408151,
+          "r_squared": 0.9910831575301372
+        }
+      },
+      "t2": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 203,
+            "predicted_mean_ms": 34.788177490234375,
+            "reference_mean_ms": 29.674877166748047,
+            "mean_bias_ms": 5.113300323486328,
+            "voxel_mae_ms": 5.74384236453202,
+            "voxel_rmse_ms": 6.849544229920372
+          },
+          {
+            "tube": 2,
+            "n_voxels": 198,
+            "predicted_mean_ms": 35.33333206176758,
+            "reference_mean_ms": 33.09090805053711,
+            "mean_bias_ms": 2.242424249649048,
+            "voxel_mae_ms": 4.404040404040404,
+            "voxel_rmse_ms": 5.606633877322777
+          },
+          {
+            "tube": 3,
+            "n_voxels": 198,
+            "predicted_mean_ms": 107.04545593261719,
+            "reference_mean_ms": 113.35858917236328,
+            "mean_bias_ms": -6.313131332397461,
+            "voxel_mae_ms": 11.313131313131313,
+            "voxel_rmse_ms": 13.904798968105736
+          },
+          {
+            "tube": 4,
+            "n_voxels": 200,
+            "predicted_mean_ms": 39.150001525878906,
+            "reference_mean_ms": 37.0099983215332,
+            "mean_bias_ms": 2.140000104904175,
+            "voxel_mae_ms": 4.46,
+            "voxel_rmse_ms": 5.628498911788116
+          },
+          {
+            "tube": 5,
+            "n_voxels": 202,
+            "predicted_mean_ms": 32.9901008605957,
+            "reference_mean_ms": 32.28712844848633,
+            "mean_bias_ms": 0.7029703259468079,
+            "voxel_mae_ms": 4.108910891089109,
+            "voxel_rmse_ms": 5.3008499225114925
+          },
+          {
+            "tube": 6,
+            "n_voxels": 205,
+            "predicted_mean_ms": 120.79512023925781,
+            "reference_mean_ms": 122.65853881835938,
+            "mean_bias_ms": -1.8634146451950073,
+            "voxel_mae_ms": 8.595121951219513,
+            "voxel_rmse_ms": 10.841654090342217
+          },
+          {
+            "tube": 7,
+            "n_voxels": 201,
+            "predicted_mean_ms": 178.9303436279297,
+            "reference_mean_ms": 186.3681640625,
+            "mean_bias_ms": -7.437810897827148,
+            "voxel_mae_ms": 9.925373134328359,
+            "voxel_rmse_ms": 12.293063205933443
+          },
+          {
+            "tube": 8,
+            "n_voxels": 201,
+            "predicted_mean_ms": 36.84577178955078,
+            "reference_mean_ms": 32.606964111328125,
+            "mean_bias_ms": 4.238805770874023,
+            "voxel_mae_ms": 5.074626865671642,
+            "voxel_rmse_ms": 6.3024910182265135
+          },
+          {
+            "tube": 9,
+            "n_voxels": 201,
+            "predicted_mean_ms": 117.4527359008789,
+            "reference_mean_ms": 120.7960205078125,
+            "mean_bias_ms": -3.3432836532592773,
+            "voxel_mae_ms": 7.124378109452737,
+            "voxel_rmse_ms": 8.648469222960646
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 3.7105738321940103,
+          "rmse": 4.2692997732865745,
+          "mean_bias": -0.5022388034396701,
+          "bias_sd": 4.496833478217457,
+          "bland_altman_lower": -9.316032420745886,
+          "bland_altman_upper": 8.311554813866545,
+          "pearson_r": 0.999436935255317,
+          "r_squared": 0.9939240195227094
+        },
+        "voxel_metrics_ms": {
+          "n": 1809,
+          "mae": 6.749032614704256,
+          "rmse": 8.907453664796241,
+          "mean_bias": -0.4947484798231067,
+          "bias_sd": 8.896162296236087,
+          "bland_altman_lower": -17.931226580445834,
+          "bland_altman_upper": 16.941729620799624,
+          "pearson_r": 0.9879816339150456,
+          "r_squared": 0.9736208788759348
+        }
+      }
+    },
+    {
+      "scanner": "scanner2",
+      "platform": "MAGNETOM Skyra",
+      "metadata": {
+        "scanner_directory": "scanner2",
+        "vendor": "Siemens",
+        "model": "MAGNETOM Skyra",
+        "protocol_name": "spiral_cMRF_128fov_128px_705rep_trig400ms",
+        "field_strength_t_approx": 2.89462193202903,
+        "reconstruction_matrix": [
+          1,
+          128,
+          128
+        ],
+        "cMRF_input_shape": [
+          1,
+          44,
+          1,
+          705,
+          355
+        ],
+        "cMRF_md5": "6fe4d67bc9dd78ed5f7b092559258075",
+        "ref_t1_md5": "2bb5b8eb16ca9663434151e58b7a7bd2",
+        "ref_t2_md5": "f48333a8eb455e679851b0fae71fb651",
+        "mask_md5": "dfc61a3a7f878d0e406c95ddd16f4872"
+      },
+      "reference_reconstruction": {
+        "t1_raw_shape": [
+          7,
+          44,
+          1,
+          128,
+          128
+        ],
+        "t2_raw_shape": [
+          5,
+          44,
+          1,
+          128,
+          128
+        ],
+        "t1_reconstruction_shape": [
+          7,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t2_reconstruction_shape": [
+          5,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t1_echo_or_inversion_times_ms": [
+          25,
+          50,
+          300,
+          600,
+          1200,
+          2400,
+          4800
+        ],
+        "t2_echo_times_ms": [
+          24.0,
+          50.0,
+          100.0,
+          200.0,
+          400.0
+        ]
+      },
+      "cmrf_reconstruction": {
+        "raw_shape": [
+          1,
+          44,
+          1,
+          705,
+          355
+        ],
+        "dynamic_index_shape": [
+          45,
+          20
+        ],
+        "reconstruction_shape": [
+          45,
+          128,
+          128
+        ],
+        "n_acquisitions": 705,
+        "n_receiver_channels": 44,
+        "n_windows": 45,
+        "n_acq_per_block": 47,
+        "n_acq_per_image": 20,
+        "window_overlap": 10,
+        "dictionary_entries": 22988,
+        "finite_reconstruction": true,
+        "finite_t1": true,
+        "finite_t2": true
+      },
+      "t1": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 202,
+            "predicted_mean_ms": 1018.6138916015625,
+            "reference_mean_ms": 1028.1683349609375,
+            "mean_bias_ms": -9.554455757141113,
+            "voxel_mae_ms": 42.32673267326733,
+            "voxel_rmse_ms": 51.94723141309023
+          },
+          {
+            "tube": 2,
+            "n_voxels": 201,
+            "predicted_mean_ms": 346.1194152832031,
+            "reference_mean_ms": 337.6119384765625,
+            "mean_bias_ms": 8.507462501525879,
+            "voxel_mae_ms": 13.980099502487562,
+            "voxel_rmse_ms": 16.646754274052842
+          },
+          {
+            "tube": 3,
+            "n_voxels": 201,
+            "predicted_mean_ms": 293.4825744628906,
+            "reference_mean_ms": 288.70648193359375,
+            "mean_bias_ms": 4.776119232177734,
+            "voxel_mae_ms": 6.467661691542289,
+            "voxel_rmse_ms": 8.809763918432063
+          },
+          {
+            "tube": 4,
+            "n_voxels": 201,
+            "predicted_mean_ms": 1428.0596923828125,
+            "reference_mean_ms": 1400.3482666015625,
+            "mean_bias_ms": 27.711442947387695,
+            "voxel_mae_ms": 69.50248756218906,
+            "voxel_rmse_ms": 90.3641059369872
+          },
+          {
+            "tube": 5,
+            "n_voxels": 204,
+            "predicted_mean_ms": 446.42156982421875,
+            "reference_mean_ms": 431.2254943847656,
+            "mean_bias_ms": 15.196078300476074,
+            "voxel_mae_ms": 20.098039215686274,
+            "voxel_rmse_ms": 25.475863240391625
+          },
+          {
+            "tube": 6,
+            "n_voxels": 201,
+            "predicted_mean_ms": 439.2039794921875,
+            "reference_mean_ms": 430.04974365234375,
+            "mean_bias_ms": 9.154229164123535,
+            "voxel_mae_ms": 12.437810945273633,
+            "voxel_rmse_ms": 17.016234566024593
+          },
+          {
+            "tube": 7,
+            "n_voxels": 198,
+            "predicted_mean_ms": 1855.9595947265625,
+            "reference_mean_ms": 1797.272705078125,
+            "mean_bias_ms": 58.68687057495117,
+            "voxel_mae_ms": 70.60606060606061,
+            "voxel_rmse_ms": 95.44155755796795
+          },
+          {
+            "tube": 8,
+            "n_voxels": 200,
+            "predicted_mean_ms": 562.4000244140625,
+            "reference_mean_ms": 559.2000122070312,
+            "mean_bias_ms": 3.200000047683716,
+            "voxel_mae_ms": 23.8,
+            "voxel_rmse_ms": 29.563490998188964
+          },
+          {
+            "tube": 9,
+            "n_voxels": 196,
+            "predicted_mean_ms": 592.755126953125,
+            "reference_mean_ms": 582.39794921875,
+            "mean_bias_ms": 10.357142448425293,
+            "voxel_mae_ms": 16.785714285714285,
+            "voxel_rmse_ms": 21.630005613895314
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 16.349314371744793,
+          "rmse": 23.167941682248625,
+          "mean_bias": 14.226104736328125,
+          "bias_sd": 19.39504831267462,
+          "bland_altman_lower": -23.78818995651413,
+          "bland_altman_upper": 52.24039942917038,
+          "pearson_r": 0.9996973457437375,
+          "r_squared": 0.9978503318963695
+        },
+        "voxel_metrics_ms": {
+          "n": 1804,
+          "mae": 30.631929046563194,
+          "rmse": 50.04654153176287,
+          "mean_bias": 14.157427937915743,
+          "bias_sd": 48.01563857410645,
+          "bland_altman_lower": -79.95322366733289,
+          "bland_altman_upper": 108.26807954316438,
+          "pearson_r": 0.9959397701301562,
+          "r_squared": 0.9899343688859346
+        }
+      },
+      "t2": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 202,
+            "predicted_mean_ms": 33.69306945800781,
+            "reference_mean_ms": 29.19801902770996,
+            "mean_bias_ms": 4.495049476623535,
+            "voxel_mae_ms": 4.8316831683168315,
+            "voxel_rmse_ms": 5.754034314382311
+          },
+          {
+            "tube": 2,
+            "n_voxels": 201,
+            "predicted_mean_ms": 35.442787170410156,
+            "reference_mean_ms": 33.13432693481445,
+            "mean_bias_ms": 2.308457612991333,
+            "voxel_mae_ms": 3.8805970149253732,
+            "voxel_rmse_ms": 4.763041797441956
+          },
+          {
+            "tube": 3,
+            "n_voxels": 201,
+            "predicted_mean_ms": 114.33831024169922,
+            "reference_mean_ms": 110.82089233398438,
+            "mean_bias_ms": 3.5174129009246826,
+            "voxel_mae_ms": 7.2288557213930345,
+            "voxel_rmse_ms": 9.04631532147329
+          },
+          {
+            "tube": 4,
+            "n_voxels": 201,
+            "predicted_mean_ms": 38.91542434692383,
+            "reference_mean_ms": 35.52238845825195,
+            "mean_bias_ms": 3.3930349349975586,
+            "voxel_mae_ms": 4.467661691542289,
+            "voxel_rmse_ms": 5.633941207745987
+          },
+          {
+            "tube": 5,
+            "n_voxels": 204,
+            "predicted_mean_ms": 31.882352828979492,
+            "reference_mean_ms": 31.882352828979492,
+            "mean_bias_ms": 0.0,
+            "voxel_mae_ms": 3.588235294117647,
+            "voxel_rmse_ms": 4.584714586878583
+          },
+          {
+            "tube": 6,
+            "n_voxels": 201,
+            "predicted_mean_ms": 122.53234100341797,
+            "reference_mean_ms": 116.46765899658203,
+            "mean_bias_ms": 6.064676761627197,
+            "voxel_mae_ms": 9.507462686567164,
+            "voxel_rmse_ms": 12.027125229810004
+          },
+          {
+            "tube": 7,
+            "n_voxels": 198,
+            "predicted_mean_ms": 183.56060791015625,
+            "reference_mean_ms": 172.6262664794922,
+            "mean_bias_ms": 10.934343338012695,
+            "voxel_mae_ms": 12.146464646464647,
+            "voxel_rmse_ms": 14.689548266806174
+          },
+          {
+            "tube": 8,
+            "n_voxels": 200,
+            "predicted_mean_ms": 33.400001525878906,
+            "reference_mean_ms": 31.260000228881836,
+            "mean_bias_ms": 2.140000104904175,
+            "voxel_mae_ms": 3.62,
+            "voxel_rmse_ms": 4.48998886412873
+          },
+          {
+            "tube": 9,
+            "n_voxels": 196,
+            "predicted_mean_ms": 118.64795684814453,
+            "reference_mean_ms": 111.55612182617188,
+            "mean_bias_ms": 7.091836929321289,
+            "voxel_mae_ms": 7.8061224489795915,
+            "voxel_rmse_ms": 9.258200997725515
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 4.438313802083333,
+          "rmse": 5.381380535451012,
+          "mean_bias": 4.438313802083333,
+          "bias_sd": 3.227724499436646,
+          "bland_altman_lower": -1.8880262168124933,
+          "bland_altman_upper": 10.76465382097916,
+          "pearson_r": 0.9995610009987109,
+          "r_squared": 0.9886929854031835
+        },
+        "voxel_metrics_ms": {
+          "n": 1804,
+          "mae": 6.324279379157428,
+          "rmse": 8.521428578066384,
+          "mean_bias": 4.414079822616408,
+          "bias_sd": 7.291098150628585,
+          "bland_altman_lower": -9.876472552615619,
+          "bland_altman_upper": 18.704632197848433,
+          "pearson_r": 0.9918106068852919,
+          "r_squared": 0.9715919392651958
+        }
+      }
+    },
+    {
+      "scanner": "scanner3",
+      "platform": "MAGNETOM Lumina",
+      "metadata": {
+        "scanner_directory": "scanner3",
+        "vendor": "Siemens",
+        "model": "MAGNETOM Lumina",
+        "protocol_name": "spiral_cMRF_128fov_128px_705rep_trig400ms",
+        "field_strength_t_approx": 2.8921704441365055,
+        "reconstruction_matrix": [
+          1,
+          128,
+          128
+        ],
+        "cMRF_input_shape": [
+          1,
+          16,
+          1,
+          705,
+          355
+        ],
+        "cMRF_md5": "f87eb793a74ca4d5bde1af8cd4775cd1",
+        "ref_t1_md5": "bfd9b73e2a16120032fc3a6ee8f6da72",
+        "ref_t2_md5": "b9a7715768ff9d1e120bcdd693c091b9",
+        "mask_md5": "de87da68c7f40c2ea42aa31c986be697"
+      },
+      "reference_reconstruction": {
+        "t1_raw_shape": [
+          7,
+          16,
+          1,
+          128,
+          128
+        ],
+        "t2_raw_shape": [
+          5,
+          16,
+          1,
+          128,
+          128
+        ],
+        "t1_reconstruction_shape": [
+          7,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t2_reconstruction_shape": [
+          5,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t1_echo_or_inversion_times_ms": [
+          25,
+          50,
+          300,
+          600,
+          1200,
+          2400,
+          4800
+        ],
+        "t2_echo_times_ms": [
+          24.0,
+          50.0,
+          100.0,
+          200.0,
+          400.0
+        ]
+      },
+      "cmrf_reconstruction": {
+        "raw_shape": [
+          1,
+          16,
+          1,
+          705,
+          355
+        ],
+        "dynamic_index_shape": [
+          45,
+          20
+        ],
+        "reconstruction_shape": [
+          45,
+          128,
+          128
+        ],
+        "n_acquisitions": 705,
+        "n_receiver_channels": 16,
+        "n_windows": 45,
+        "n_acq_per_block": 47,
+        "n_acq_per_image": 20,
+        "window_overlap": 10,
+        "dictionary_entries": 22988,
+        "finite_reconstruction": true,
+        "finite_t1": true,
+        "finite_t2": true
+      },
+      "t1": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 201,
+            "predicted_mean_ms": 1004.8258666992188,
+            "reference_mean_ms": 1017.6616821289062,
+            "mean_bias_ms": -12.835821151733398,
+            "voxel_mae_ms": 40.49751243781095,
+            "voxel_rmse_ms": 50.74568334459053
+          },
+          {
+            "tube": 2,
+            "n_voxels": 199,
+            "predicted_mean_ms": 346.3316650390625,
+            "reference_mean_ms": 337.13568115234375,
+            "mean_bias_ms": 9.195980072021484,
+            "voxel_mae_ms": 14.321608040201005,
+            "voxel_rmse_ms": 16.909454404007423
+          },
+          {
+            "tube": 3,
+            "n_voxels": 200,
+            "predicted_mean_ms": 291.95001220703125,
+            "reference_mean_ms": 289.3500061035156,
+            "mean_bias_ms": 2.5999999046325684,
+            "voxel_mae_ms": 5.9,
+            "voxel_rmse_ms": 8.54400374531753
+          },
+          {
+            "tube": 4,
+            "n_voxels": 202,
+            "predicted_mean_ms": 1403.019775390625,
+            "reference_mean_ms": 1373.5643310546875,
+            "mean_bias_ms": 29.455446243286133,
+            "voxel_mae_ms": 75.89108910891089,
+            "voxel_rmse_ms": 96.36718146426374
+          },
+          {
+            "tube": 5,
+            "n_voxels": 203,
+            "predicted_mean_ms": 445.71429443359375,
+            "reference_mean_ms": 431.9211730957031,
+            "mean_bias_ms": 13.793103218078613,
+            "voxel_mae_ms": 17.438423645320196,
+            "voxel_rmse_ms": 23.27814256297667
+          },
+          {
+            "tube": 6,
+            "n_voxels": 202,
+            "predicted_mean_ms": 441.13861083984375,
+            "reference_mean_ms": 429.9010009765625,
+            "mean_bias_ms": 11.237624168395996,
+            "voxel_mae_ms": 14.702970297029703,
+            "voxel_rmse_ms": 19.204475550978184
+          },
+          {
+            "tube": 7,
+            "n_voxels": 202,
+            "predicted_mean_ms": 1792.0792236328125,
+            "reference_mean_ms": 1745.39599609375,
+            "mean_bias_ms": 46.68316650390625,
+            "voxel_mae_ms": 65.5940594059406,
+            "voxel_rmse_ms": 90.03024794231357
+          },
+          {
+            "tube": 8,
+            "n_voxels": 201,
+            "predicted_mean_ms": 562.3383178710938,
+            "reference_mean_ms": 556.1691284179688,
+            "mean_bias_ms": 6.169154167175293,
+            "voxel_mae_ms": 24.975124378109452,
+            "voxel_rmse_ms": 29.590908917220904
+          },
+          {
+            "tube": 9,
+            "n_voxels": 200,
+            "predicted_mean_ms": 585.6500244140625,
+            "reference_mean_ms": 580.0499877929688,
+            "mean_bias_ms": 5.599999904632568,
+            "voxel_mae_ms": 18.1,
+            "voxel_rmse_ms": 23.664319132398465
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 15.285603841145834,
+          "rmse": 20.24567065919894,
+          "mean_bias": 12.43320041232639,
+          "bias_sd": 16.9474348041565,
+          "bland_altman_lower": -20.783771803820354,
+          "bland_altman_upper": 45.65017262847313,
+          "pearson_r": 0.9997074702356668,
+          "r_squared": 0.9982466977401314
+        },
+        "voxel_metrics_ms": {
+          "n": 1810,
+          "mae": 30.883977900552487,
+          "rmse": 50.27438524889883,
+          "mean_bias": 12.475138121546962,
+          "bias_sd": 48.71545852148215,
+          "bland_altman_lower": -83.00716058055805,
+          "bland_altman_upper": 107.95743682365197,
+          "pearson_r": 0.9954041697065577,
+          "r_squared": 0.9892159549850585
+        }
+      },
+      "t2": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 201,
+            "predicted_mean_ms": 33.83084487915039,
+            "reference_mean_ms": 30.208955764770508,
+            "mean_bias_ms": 3.6218905448913574,
+            "voxel_mae_ms": 4.398009950248756,
+            "voxel_rmse_ms": 5.327110797865605
+          },
+          {
+            "tube": 2,
+            "n_voxels": 199,
+            "predicted_mean_ms": 34.432159423828125,
+            "reference_mean_ms": 34.25125503540039,
+            "mean_bias_ms": 0.18090452253818512,
+            "voxel_mae_ms": 3.6381909547738696,
+            "voxel_rmse_ms": 4.60718250704987
+          },
+          {
+            "tube": 3,
+            "n_voxels": 200,
+            "predicted_mean_ms": 112.73999786376953,
+            "reference_mean_ms": 114.67500305175781,
+            "mean_bias_ms": -1.934999942779541,
+            "voxel_mae_ms": 9.735,
+            "voxel_rmse_ms": 12.095660378830088
+          },
+          {
+            "tube": 4,
+            "n_voxels": 202,
+            "predicted_mean_ms": 38.346534729003906,
+            "reference_mean_ms": 36.79207992553711,
+            "mean_bias_ms": 1.5544553995132446,
+            "voxel_mae_ms": 4.069306930693069,
+            "voxel_rmse_ms": 5.079564961492254
+          },
+          {
+            "tube": 5,
+            "n_voxels": 203,
+            "predicted_mean_ms": 30.492610931396484,
+            "reference_mean_ms": 32.916255950927734,
+            "mean_bias_ms": -2.423645257949829,
+            "voxel_mae_ms": 4.650246305418719,
+            "voxel_rmse_ms": 5.5973251880772255
+          },
+          {
+            "tube": 6,
+            "n_voxels": 202,
+            "predicted_mean_ms": 118.79702758789062,
+            "reference_mean_ms": 125.07425689697266,
+            "mean_bias_ms": -6.277227878570557,
+            "voxel_mae_ms": 9.841584158415841,
+            "voxel_rmse_ms": 12.468971390004569
+          },
+          {
+            "tube": 7,
+            "n_voxels": 202,
+            "predicted_mean_ms": 181.6336669921875,
+            "reference_mean_ms": 187.22772216796875,
+            "mean_bias_ms": -5.594059467315674,
+            "voxel_mae_ms": 9.554455445544555,
+            "voxel_rmse_ms": 11.752396005972065
+          },
+          {
+            "tube": 8,
+            "n_voxels": 201,
+            "predicted_mean_ms": 32.995025634765625,
+            "reference_mean_ms": 32.70646667480469,
+            "mean_bias_ms": 0.2885572016239166,
+            "voxel_mae_ms": 3.3134328358208953,
+            "voxel_rmse_ms": 4.299716524267004
+          },
+          {
+            "tube": 9,
+            "n_voxels": 200,
+            "predicted_mean_ms": 117.41500091552734,
+            "reference_mean_ms": 122.92500305175781,
+            "mean_bias_ms": -5.510000228881836,
+            "voxel_mae_ms": 7.41,
+            "voxel_rmse_ms": 9.561380653441217
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 3.0428604549831815,
+          "rmse": 3.746492998228827,
+          "mean_bias": -1.7882366180419922,
+          "bias_sd": 3.491879441164927,
+          "bland_altman_lower": -8.63232032272525,
+          "bland_altman_upper": 5.055847086641265,
+          "pearson_r": 0.9993676870738412,
+          "r_squared": 0.9954006127027853
+        },
+        "voxel_metrics_ms": {
+          "n": 1810,
+          "mae": 6.291160220994475,
+          "rmse": 8.541966598516161,
+          "mean_bias": -1.7917127071823205,
+          "bias_sd": 8.35425154638527,
+          "bland_altman_lower": -18.16604573809745,
+          "bland_altman_upper": 14.582620323732808,
+          "pearson_r": 0.9889711658893591,
+          "r_squared": 0.9761757495389327
+        }
+      }
+    },
+    {
+      "scanner": "scanner4",
+      "platform": "Skyra_fit",
+      "metadata": {
+        "scanner_directory": "scanner4",
+        "vendor": "SIEMENS",
+        "model": "Skyra_fit",
+        "protocol_name": "spiral_cMRF_128fov_128px_705rep_trig400ms",
+        "field_strength_t_approx": 2.8945727740329286,
+        "reconstruction_matrix": [
+          1,
+          128,
+          128
+        ],
+        "cMRF_input_shape": [
+          1,
+          16,
+          1,
+          705,
+          355
+        ],
+        "cMRF_md5": "033fdd9ab0db86a8f57637a7b933c870",
+        "ref_t1_md5": "bfd9b73e2a16120032fc3a6ee8f6da72",
+        "ref_t2_md5": "b9a7715768ff9d1e120bcdd693c091b9",
+        "mask_md5": "b917af02442579075ba0285e085bf1da"
+      },
+      "reference_reconstruction": {
+        "t1_raw_shape": [
+          7,
+          16,
+          1,
+          128,
+          128
+        ],
+        "t2_raw_shape": [
+          5,
+          16,
+          1,
+          128,
+          128
+        ],
+        "t1_reconstruction_shape": [
+          7,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t2_reconstruction_shape": [
+          5,
+          1,
+          1,
+          128,
+          128
+        ],
+        "t1_echo_or_inversion_times_ms": [
+          25,
+          50,
+          300,
+          600,
+          1200,
+          2400,
+          4800
+        ],
+        "t2_echo_times_ms": [
+          24.0,
+          50.0,
+          100.0,
+          200.0,
+          400.0
+        ]
+      },
+      "cmrf_reconstruction": {
+        "raw_shape": [
+          1,
+          16,
+          1,
+          705,
+          355
+        ],
+        "dynamic_index_shape": [
+          45,
+          20
+        ],
+        "reconstruction_shape": [
+          45,
+          128,
+          128
+        ],
+        "n_acquisitions": 705,
+        "n_receiver_channels": 16,
+        "n_windows": 45,
+        "n_acq_per_block": 47,
+        "n_acq_per_image": 20,
+        "window_overlap": 10,
+        "dictionary_entries": 22988,
+        "finite_reconstruction": true,
+        "finite_t1": true,
+        "finite_t2": true
+      },
+      "t1": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 198,
+            "predicted_mean_ms": 1000.2020263671875,
+            "reference_mean_ms": 1017.3232421875,
+            "mean_bias_ms": -17.121212005615234,
+            "voxel_mae_ms": 39.24242424242424,
+            "voxel_rmse_ms": 49.15960401250875
+          },
+          {
+            "tube": 2,
+            "n_voxels": 202,
+            "predicted_mean_ms": 341.8316955566406,
+            "reference_mean_ms": 337.22772216796875,
+            "mean_bias_ms": 4.6039605140686035,
+            "voxel_mae_ms": 13.811881188118813,
+            "voxel_rmse_ms": 16.48581748709544
+          },
+          {
+            "tube": 3,
+            "n_voxels": 201,
+            "predicted_mean_ms": 288.5074768066406,
+            "reference_mean_ms": 289.25372314453125,
+            "mean_bias_ms": -0.746268630027771,
+            "voxel_mae_ms": 6.417910447761194,
+            "voxel_rmse_ms": 8.781482099321078
+          },
+          {
+            "tube": 4,
+            "n_voxels": 199,
+            "predicted_mean_ms": 1400.6533203125,
+            "reference_mean_ms": 1372.91455078125,
+            "mean_bias_ms": 27.738693237304688,
+            "voxel_mae_ms": 77.8894472361809,
+            "voxel_rmse_ms": 96.61611339126705
+          },
+          {
+            "tube": 5,
+            "n_voxels": 201,
+            "predicted_mean_ms": 444.47760009765625,
+            "reference_mean_ms": 432.08953857421875,
+            "mean_bias_ms": 12.388059616088867,
+            "voxel_mae_ms": 16.069651741293534,
+            "voxel_rmse_ms": 20.35750133725938
+          },
+          {
+            "tube": 6,
+            "n_voxels": 200,
+            "predicted_mean_ms": 439.1000061035156,
+            "reference_mean_ms": 430.0,
+            "mean_bias_ms": 9.100000381469727,
+            "voxel_mae_ms": 14.0,
+            "voxel_rmse_ms": 18.138357147217054
+          },
+          {
+            "tube": 7,
+            "n_voxels": 202,
+            "predicted_mean_ms": 1782.0296630859375,
+            "reference_mean_ms": 1745.5445556640625,
+            "mean_bias_ms": 36.48514938354492,
+            "voxel_mae_ms": 58.76237623762376,
+            "voxel_rmse_ms": 72.70924056381236
+          },
+          {
+            "tube": 8,
+            "n_voxels": 206,
+            "predicted_mean_ms": 562.2815551757812,
+            "reference_mean_ms": 556.0194091796875,
+            "mean_bias_ms": 6.262135982513428,
+            "voxel_mae_ms": 26.16504854368932,
+            "voxel_rmse_ms": 31.445746158364738
+          },
+          {
+            "tube": 9,
+            "n_voxels": 202,
+            "predicted_mean_ms": 586.5841674804688,
+            "reference_mean_ms": 580.0494995117188,
+            "mean_bias_ms": 6.534653663635254,
+            "voxel_mae_ms": 19.504950495049506,
+            "voxel_rmse_ms": 25.736671067248817
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 13.44224378797743,
+          "rmse": 17.428209641429,
+          "mean_bias": 9.47169664171007,
+          "bias_sd": 15.517188398261592,
+          "bland_altman_lower": -20.94199261888265,
+          "bland_altman_upper": 39.88538590230279,
+          "pearson_r": 0.9997174337458113,
+          "r_squared": 0.9987002443358395
+        },
+        "voxel_metrics_ms": {
+          "n": 1811,
+          "mae": 30.138045278851465,
+          "rmse": 46.767396743057915,
+          "mean_bias": 9.497515184980674,
+          "bias_sd": 45.80551451046195,
+          "bland_altman_lower": -80.28129325552474,
+          "bland_altman_upper": 99.27632362548609,
+          "pearson_r": 0.9958440423222455,
+          "r_squared": 0.9906417673272133
+        }
+      },
+      "t2": {
+        "tube_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "per_tube": [
+          {
+            "tube": 1,
+            "n_voxels": 198,
+            "predicted_mean_ms": 34.79798126220703,
+            "reference_mean_ms": 30.24242401123047,
+            "mean_bias_ms": 4.55555534362793,
+            "voxel_mae_ms": 4.9393939393939394,
+            "voxel_rmse_ms": 5.855153993092606
+          },
+          {
+            "tube": 2,
+            "n_voxels": 202,
+            "predicted_mean_ms": 33.60396194458008,
+            "reference_mean_ms": 34.29703140258789,
+            "mean_bias_ms": -0.6930692791938782,
+            "voxel_mae_ms": 3.8613861386138613,
+            "voxel_rmse_ms": 4.951247467573047
+          },
+          {
+            "tube": 3,
+            "n_voxels": 201,
+            "predicted_mean_ms": 114.0447769165039,
+            "reference_mean_ms": 114.55223846435547,
+            "mean_bias_ms": -0.5074626803398132,
+            "voxel_mae_ms": 9.313432835820896,
+            "voxel_rmse_ms": 11.696408429481835
+          },
+          {
+            "tube": 4,
+            "n_voxels": 199,
+            "predicted_mean_ms": 38.743717193603516,
+            "reference_mean_ms": 36.854270935058594,
+            "mean_bias_ms": 1.8894472122192383,
+            "voxel_mae_ms": 4.28140703517588,
+            "voxel_rmse_ms": 5.516535217328001
+          },
+          {
+            "tube": 5,
+            "n_voxels": 201,
+            "predicted_mean_ms": 30.85572052001953,
+            "reference_mean_ms": 32.91542434692383,
+            "mean_bias_ms": -2.059701442718506,
+            "voxel_mae_ms": 4.388059701492537,
+            "voxel_rmse_ms": 5.421534360849394
+          },
+          {
+            "tube": 6,
+            "n_voxels": 200,
+            "predicted_mean_ms": 121.4800033569336,
+            "reference_mean_ms": 125.30000305175781,
+            "mean_bias_ms": -3.819999933242798,
+            "voxel_mae_ms": 8.67,
+            "voxel_rmse_ms": 10.8664621657649
+          },
+          {
+            "tube": 7,
+            "n_voxels": 202,
+            "predicted_mean_ms": 185.84158325195312,
+            "reference_mean_ms": 187.1287078857422,
+            "mean_bias_ms": -1.2871286869049072,
+            "voxel_mae_ms": 7.920792079207921,
+            "voxel_rmse_ms": 10.436038093506028
+          },
+          {
+            "tube": 8,
+            "n_voxels": 206,
+            "predicted_mean_ms": 32.844661712646484,
+            "reference_mean_ms": 32.72815704345703,
+            "mean_bias_ms": 0.11650485545396805,
+            "voxel_mae_ms": 3.495145631067961,
+            "voxel_rmse_ms": 4.528228612706302
+          },
+          {
+            "tube": 9,
+            "n_voxels": 202,
+            "predicted_mean_ms": 119.31188201904297,
+            "reference_mean_ms": 123.09406280517578,
+            "mean_bias_ms": -3.7821781635284424,
+            "voxel_mae_ms": 7.297029702970297,
+            "voxel_rmse_ms": 9.459659006267165
+          }
+        ],
+        "tube_mean_metrics_ms": {
+          "n": 9,
+          "mae": 2.079005347357856,
+          "rmse": 2.5792096918304432,
+          "mean_bias": -0.6208924187554253,
+          "bias_sd": 2.655215084246405,
+          "bland_altman_lower": -5.82511398387838,
+          "bland_altman_upper": 4.583329146367529,
+          "pearson_r": 0.9992418746434111,
+          "r_squared": 0.9978194186421799
+        },
+        "voxel_metrics_ms": {
+          "n": 1811,
+          "mae": 6.014356709000552,
+          "rmse": 8.110160917325524,
+          "mean_bias": -0.6305908337934842,
+          "bias_sd": 8.087841815393835,
+          "bland_altman_lower": -16.4827607919654,
+          "bland_altman_upper": 15.221579124378433,
+          "pearson_r": 0.9892736305141073,
+          "r_squared": 0.9785071357974264
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "t1": {
+      "pooled_tube_mean_metrics_ms": {
+        "n": 36,
+        "mae": 14.421048482259115,
+        "rmse": 19.63723176035319,
+        "mean_bias": 8.953771803114149,
+        "bias_sd": 17.725067238617545,
+        "bland_altman_lower": -25.787359984576234,
+        "bland_altman_upper": 43.694903590804536,
+        "pearson_r": 0.9994543590072195,
+        "r_squared": 0.9983839446534487
+      },
+      "scanner_mae_ms": {
+        "mean": 14.421048482259115,
+        "sd": 1.7043454263731024,
+        "min": 12.607031928168404,
+        "max": 16.349314371744793
+      },
+      "scanner_bias_ms": {
+        "mean": 8.953771803114149,
+        "sd": 6.483292624024698
+      }
+    },
+    "t2": {
+      "pooled_tube_mean_metrics_ms": {
+        "n": 36,
+        "mae": 3.3176883591545954,
+        "rmse": 4.119305446362454,
+        "mean_bias": 0.38173649046156144,
+        "bias_sd": 4.159760865524201,
+        "bland_altman_lower": -7.771394805965873,
+        "bland_altman_upper": 8.534867786888995,
+        "pearson_r": 0.9973721676170589,
+        "r_squared": 0.9941888396464128
+      },
+      "scanner_mae_ms": {
+        "mean": 3.3176883591545954,
+        "sd": 1.003332174787215,
+        "min": 2.079005347357856,
+        "max": 4.438313802083333
+      },
+      "scanner_bias_ms": {
+        "mean": 0.38173649046156133,
+        "sd": 2.76594045649447
+      }
+    },
+    "n_scanners": 4,
+    "n_tubes_per_scanner": 9,
+    "n_tube_means": 36
+  }
+}

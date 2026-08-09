@@ -1,0 +1,1 @@
+subject_id,scan_id,site_id,vendor,scanner_model,field_strength_t,sequence_id,repeat_id,n_timepoints,complex_encoding,fingerprint_path,schedule_path,reference_t1_path,reference_t2_path,mask_path,reference_independent,split

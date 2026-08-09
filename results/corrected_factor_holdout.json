@@ -1,0 +1,375 @@
+{
+  "schema_version": "corrected-factor-holdout-v1",
+  "protocol": {
+    "model": "same ResNet1D-18 configuration as corrected benchmark",
+    "algorithm": "ERM",
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "epochs": 15,
+    "source_split": "80/20 by deterministic sample-ID permutation",
+    "target_scaler": "source training only",
+    "target_labels_used_for_training": false,
+    "target_labels_used_for_model_selection": false,
+    "primary_metric": "absolute MAE in ms"
+  },
+  "conditions": [
+    {
+      "name": "Field strength (3.0 T)",
+      "factor": "field_strength",
+      "source_values": [
+        1.5
+      ],
+      "target_value": 3.0,
+      "n_source": 50002,
+      "n_target": 49998,
+      "n_train": 40001,
+      "n_validation": 10001,
+      "split_overlap": 0,
+      "sample_id_overlap": 0,
+      "records": [
+        {
+          "seed": 42,
+          "source": {
+            "mae": 128.9912109375,
+            "rmse": 177.49070739746094,
+            "mae_t1": 138.26699829101562,
+            "mae_t2": 119.7154312133789,
+            "bias_t1": -12.243792533874512,
+            "bias_t2": -3.305536985397339
+          },
+          "target": {
+            "mae": 172.09263610839844,
+            "rmse": 223.9027862548828,
+            "mae_t1": 224.64195251464844,
+            "mae_t2": 119.5433349609375,
+            "bias_t1": 201.7797088623047,
+            "bias_t2": 1.0395416021347046
+          },
+          "ds3": 1.334142340843535,
+          "train_size": 40001,
+          "validation_size": 10001,
+          "target_size": 49998,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        },
+        {
+          "seed": 123,
+          "source": {
+            "mae": 128.33961486816406,
+            "rmse": 178.44082641601562,
+            "mae_t1": 140.38375854492188,
+            "mae_t2": 116.29547119140625,
+            "bias_t1": -22.48288345336914,
+            "bias_t2": -2.5574121475219727
+          },
+          "target": {
+            "mae": 168.22640991210938,
+            "rmse": 219.66725158691406,
+            "mae_t1": 219.76966857910156,
+            "mae_t2": 116.68316650390625,
+            "bias_t1": 196.5269775390625,
+            "bias_t2": 1.6104888916015625
+          },
+          "ds3": 1.3107909828537254,
+          "train_size": 40001,
+          "validation_size": 10001,
+          "target_size": 49998,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        },
+        {
+          "seed": 456,
+          "source": {
+            "mae": 128.70872497558594,
+            "rmse": 176.3874053955078,
+            "mae_t1": 141.18553161621094,
+            "mae_t2": 116.23194122314453,
+            "bias_t1": -10.65694808959961,
+            "bias_t2": -0.28134793043136597
+          },
+          "target": {
+            "mae": 170.72662353515625,
+            "rmse": 222.84303283691406,
+            "mae_t1": 224.3541717529297,
+            "mae_t2": 117.09910583496094,
+            "bias_t1": 200.43289184570312,
+            "bias_t2": 4.051709175109863
+          },
+          "ds3": 1.3264572667279586,
+          "train_size": 40001,
+          "validation_size": 10001,
+          "target_size": 49998,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        }
+      ],
+      "summary": {
+        "source_mae": {
+          "mean": 128.67985026041666,
+          "sd": 0.3267562872778286,
+          "n": 3
+        },
+        "target_mae": {
+          "mean": 170.3485565185547,
+          "sd": 1.9606446011451062,
+          "n": 3
+        },
+        "target_mae_t1": {
+          "mean": 222.92193094889322,
+          "sd": 2.733728768131046,
+          "n": 3
+        },
+        "target_mae_t2": {
+          "mean": 117.77520243326823,
+          "sd": 1.5453060727024757,
+          "n": 3
+        },
+        "ds3": {
+          "mean": 1.3237968634750727,
+          "sd": 0.011900831445450904,
+          "n": 3
+        }
+      }
+    },
+    {
+      "name": "Flip-angle schedule (variant 2)",
+      "factor": "fa_variant",
+      "source_values": [
+        0,
+        1
+      ],
+      "target_value": 2,
+      "n_source": 66668,
+      "n_target": 33332,
+      "n_train": 53334,
+      "n_validation": 13334,
+      "split_overlap": 0,
+      "sample_id_overlap": 0,
+      "records": [
+        {
+          "seed": 42,
+          "source": {
+            "mae": 139.1214599609375,
+            "rmse": 187.71273803710938,
+            "mae_t1": 160.28343200683594,
+            "mae_t2": 117.95948028564453,
+            "bias_t1": 0.8992981910705566,
+            "bias_t2": 1.710461139678955
+          },
+          "target": {
+            "mae": 294.6713562011719,
+            "rmse": 449.5978088378906,
+            "mae_t1": 471.8153076171875,
+            "mae_t2": 117.52742004394531,
+            "bias_t1": -442.3443298339844,
+            "bias_t2": 17.50621795654297
+          },
+          "ds3": 2.1180870031403467,
+          "train_size": 53334,
+          "validation_size": 13334,
+          "target_size": 33332,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        },
+        {
+          "seed": 123,
+          "source": {
+            "mae": 139.5020294189453,
+            "rmse": 189.05648803710938,
+            "mae_t1": 161.29953002929688,
+            "mae_t2": 117.70451354980469,
+            "bias_t1": -21.72823715209961,
+            "bias_t2": 1.0214827060699463
+          },
+          "target": {
+            "mae": 311.4906311035156,
+            "rmse": 475.2027282714844,
+            "mae_t1": 502.8812561035156,
+            "mae_t2": 120.10008239746094,
+            "bias_t1": -475.1394958496094,
+            "bias_t2": 36.061431884765625
+          },
+          "ds3": 2.232875266409659,
+          "train_size": 53334,
+          "validation_size": 13334,
+          "target_size": 33332,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        },
+        {
+          "seed": 456,
+          "source": {
+            "mae": 140.3997344970703,
+            "rmse": 190.5618438720703,
+            "mae_t1": 162.85968017578125,
+            "mae_t2": 117.9397964477539,
+            "bias_t1": 0.022873271256685257,
+            "bias_t2": 3.384453535079956
+          },
+          "target": {
+            "mae": 294.8062438964844,
+            "rmse": 448.1445617675781,
+            "mae_t1": 472.40350341796875,
+            "mae_t2": 117.20899963378906,
+            "bias_t1": -445.7808532714844,
+            "bias_t2": -5.477802753448486
+          },
+          "ds3": 2.0997635426627963,
+          "train_size": 53334,
+          "validation_size": 13334,
+          "target_size": 33332,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        }
+      ],
+      "summary": {
+        "source_mae": {
+          "mean": 139.67440795898438,
+          "sd": 0.656340017240217,
+          "n": 3
+        },
+        "target_mae": {
+          "mean": 300.32274373372394,
+          "sd": 9.671909320338505,
+          "n": 3
+        },
+        "target_mae_t1": {
+          "mean": 482.36668904622394,
+          "sd": 17.7685702783342,
+          "n": 3
+        },
+        "target_mae_t2": {
+          "mean": 118.27883402506511,
+          "sd": 1.5852624750705708,
+          "n": 3
+        },
+        "ds3": {
+          "mean": 2.1502419374042674,
+          "sd": 0.07214663954650334,
+          "n": 3
+        }
+      }
+    },
+    {
+      "name": "TR schedule (variant 1)",
+      "factor": "tr_variant",
+      "source_values": [
+        0
+      ],
+      "target_value": 1,
+      "n_source": 50000,
+      "n_target": 50000,
+      "n_train": 40000,
+      "n_validation": 10000,
+      "split_overlap": 0,
+      "sample_id_overlap": 0,
+      "records": [
+        {
+          "seed": 42,
+          "source": {
+            "mae": 139.24761962890625,
+            "rmse": 189.44229125976562,
+            "mae_t1": 160.8400421142578,
+            "mae_t2": 117.65519714355469,
+            "bias_t1": -12.432771682739258,
+            "bias_t2": 0.15247510373592377
+          },
+          "target": {
+            "mae": 173.74600219726562,
+            "rmse": 234.422607421875,
+            "mae_t1": 228.0546417236328,
+            "mae_t2": 119.4373779296875,
+            "bias_t1": -168.43748474121094,
+            "bias_t2": -16.76088523864746
+          },
+          "ds3": 1.247748454589725,
+          "train_size": 40000,
+          "validation_size": 10000,
+          "target_size": 50000,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        },
+        {
+          "seed": 123,
+          "source": {
+            "mae": 140.1282958984375,
+            "rmse": 190.181640625,
+            "mae_t1": 161.22479248046875,
+            "mae_t2": 119.03179931640625,
+            "bias_t1": -16.771432876586914,
+            "bias_t2": -0.577398419380188
+          },
+          "target": {
+            "mae": 179.12234497070312,
+            "rmse": 241.8463134765625,
+            "mae_t1": 237.7198028564453,
+            "mae_t2": 120.5248794555664,
+            "bias_t1": -190.75619506835938,
+            "bias_t2": -19.989608764648438
+          },
+          "ds3": 1.2782739119337312,
+          "train_size": 40000,
+          "validation_size": 10000,
+          "target_size": 50000,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        },
+        {
+          "seed": 456,
+          "source": {
+            "mae": 137.6199493408203,
+            "rmse": 187.08642578125,
+            "mae_t1": 158.23764038085938,
+            "mae_t2": 117.00225067138672,
+            "bias_t1": -22.632089614868164,
+            "bias_t2": 1.7811634540557861
+          },
+          "target": {
+            "mae": 172.7467041015625,
+            "rmse": 233.83021545410156,
+            "mae_t1": 227.11476135253906,
+            "mae_t2": 118.378662109375,
+            "bias_t1": -176.4652557373047,
+            "bias_t2": -15.77063274383545
+          },
+          "ds3": 1.2552446424300712,
+          "train_size": 40000,
+          "validation_size": 10000,
+          "target_size": 50000,
+          "target_labels_used_for_training": false,
+          "target_scaler_fit_on_source_only": true
+        }
+      ],
+      "summary": {
+        "source_mae": {
+          "mean": 138.99862162272134,
+          "sd": 1.272576370435401,
+          "n": 3
+        },
+        "target_mae": {
+          "mean": 175.20501708984375,
+          "sd": 3.4291022827611344,
+          "n": 3
+        },
+        "target_mae_t1": {
+          "mean": 230.96306864420572,
+          "sd": 5.870343830571467,
+          "n": 3
+        },
+        "target_mae_t2": {
+          "mean": 119.4469731648763,
+          "sd": 1.073140846150666,
+          "n": 3
+        },
+        "ds3": {
+          "mean": 1.2604223363178424,
+          "sd": 0.015907773948977987,
+          "n": 3
+        }
+      }
+    }
+  ]
+}

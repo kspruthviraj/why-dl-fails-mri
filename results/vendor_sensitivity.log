@@ -1,0 +1,25 @@
+2026-06-24 00:11:19,141 INFO Training source model (seed=42) ...
+2026-06-24 00:14:04,930 INFO   Clean (reference vendor) MAE: 225.2 ms
+2026-06-24 00:14:04,931 INFO Running 100 random vendor profiles ...
+2026-06-24 00:19:09,997 INFO   Completed 20/100 profiles (B0 dominant: 14/20)
+2026-06-24 00:24:14,725 INFO   Completed 40/100 profiles (B0 dominant: 32/40)
+2026-06-24 00:29:11,691 INFO   Completed 60/100 profiles (B0 dominant: 51/60)
+2026-06-24 00:34:09,536 INFO   Completed 80/100 profiles (B0 dominant: 66/80)
+2026-06-24 00:39:14,457 INFO   Completed 100/100 profiles (B0 dominant: 82/100)
+2026-06-24 00:39:14,461 INFO Saved → results/vendor_sensitivity.json
+
+============================================================
+VENDOR SENSITIVITY ANALYSIS SUMMARY
+============================================================
+
+100 random vendor profiles tested
+
+B₀ is the dominant corruption in 82/100 profiles (82%)
+
+Mean DS3 across all profiles:
+  B₀:     1.95 ± 0.32
+  B₁:     1.00 ± 0.00
+  SNR:    1.19 ± 0.13
+  Timing: 1.79 ± 0.00
+
+Conclusion: B₀ dominance is robust across 82% of plausible vendor parameterizations.

@@ -1,0 +1,297 @@
+{
+  "schema_version": "external-cmrf-v1",
+  "provenance": {
+    "dataset": "Open-Source Cardiac MR Fingerprinting",
+    "zenodo_record": "15726937",
+    "doi": "10.5281/zenodo.15726937",
+    "input_file": "data/external/cmrf_reference/cMRF.h5",
+    "input_md5": "3877c02fc42066d9ea8678075edba1c6",
+    "reference_files": {
+      "mask.npy": {
+        "path": "data/external/cmrf_reference/mask.npy",
+        "md5": "0d311d5d4d12e9a9b6111cb5aa3901c9"
+      },
+      "ref_t1.npy": {
+        "path": "data/external/cmrf_reference/ref_t1.npy",
+        "md5": "509121c79e21ff684eba70cd01e58fb4"
+      },
+      "ref_t2.npy": {
+        "path": "data/external/cmrf_reference/ref_t2.npy",
+        "md5": "03ce5b1d968b4c1858baae0507e08e9f"
+      }
+    },
+    "license_note": "Use and cite the Zenodo record and associated cMRF publication."
+  },
+  "task": {
+    "description": "Independent raw cMRF reconstruction and dictionary matching against supplied reference maps",
+    "model_training_performed": false,
+    "neural_benchmark_tuning_performed": false,
+    "reference_maps_used_for_dictionary_or_training": false,
+    "reference_maps_used_only_for_final_evaluation": true,
+    "units": "milliseconds"
+  },
+  "reconstruction": {
+    "mrpro_version": "0.260420",
+    "torch_version": "2.12.0+cu130",
+    "python_version": "3.12.3",
+    "input_data_shape": [
+      1,
+      16,
+      1,
+      705,
+      355
+    ],
+    "reconstructed_window_shape": [
+      45,
+      1,
+      1,
+      1,
+      128,
+      128
+    ],
+    "n_acquisitions": 705,
+    "n_blocks": 15,
+    "n_acq_per_block": 47,
+    "n_acq_per_image": 20,
+    "window_overlap": 10,
+    "finite_reconstruction": true,
+    "finite_t1": true,
+    "finite_t2": true
+  },
+  "t1": {
+    "tube_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "per_tube": [
+      {
+        "tube": 1,
+        "n_voxels": 203,
+        "predicted_mean_ms": 1012.3152465820312,
+        "reference_mean_ms": 1022.1182250976562,
+        "mean_bias_ms": -9.802964210510254,
+        "voxel_mae_ms": 42.90639943089978,
+        "voxel_rmse_ms": 54.48821194194011
+      },
+      {
+        "tube": 2,
+        "n_voxels": 198,
+        "predicted_mean_ms": 336.81817626953125,
+        "reference_mean_ms": 336.3131408691406,
+        "mean_bias_ms": 0.5050557255744934,
+        "voxel_mae_ms": 8.787884028270991,
+        "voxel_rmse_ms": 11.63415992465907
+      },
+      {
+        "tube": 3,
+        "n_voxels": 198,
+        "predicted_mean_ms": 282.22222900390625,
+        "reference_mean_ms": 287.97979736328125,
+        "mean_bias_ms": -5.757577419281006,
+        "voxel_mae_ms": 8.282826741536459,
+        "voxel_rmse_ms": 10.824586978880259
+      },
+      {
+        "tube": 4,
+        "n_voxels": 200,
+        "predicted_mean_ms": 1358.25,
+        "reference_mean_ms": 1379.5999755859375,
+        "mean_bias_ms": -21.350013732910156,
+        "voxel_mae_ms": 76.25000732421876,
+        "voxel_rmse_ms": 96.58934333102683
+      },
+      {
+        "tube": 5,
+        "n_voxels": 202,
+        "predicted_mean_ms": 432.2772216796875,
+        "reference_mean_ms": 430.59405517578125,
+        "mean_bias_ms": 1.6831666231155396,
+        "voxel_mae_ms": 15.148512887482596,
+        "voxel_rmse_ms": 19.750921373000278
+      },
+      {
+        "tube": 6,
+        "n_voxels": 205,
+        "predicted_mean_ms": 429.2195129394531,
+        "reference_mean_ms": 430.7804870605469,
+        "mean_bias_ms": -1.5609769821166992,
+        "voxel_mae_ms": 11.219510855325838,
+        "voxel_rmse_ms": 14.782980448230903
+      },
+      {
+        "tube": 7,
+        "n_voxels": 201,
+        "predicted_mean_ms": 1785.223876953125,
+        "reference_mean_ms": 1755.273681640625,
+        "mean_bias_ms": 29.950231552124023,
+        "voxel_mae_ms": 58.50744446711754,
+        "voxel_rmse_ms": 72.55807207519163
+      },
+      {
+        "tube": 8,
+        "n_voxels": 201,
+        "predicted_mean_ms": 554.776123046875,
+        "reference_mean_ms": 557.512451171875,
+        "mean_bias_ms": -2.7363510131835938,
+        "voxel_mae_ms": 17.064705464377333,
+        "voxel_rmse_ms": 21.774522009037412
+      },
+      {
+        "tube": 9,
+        "n_voxels": 201,
+        "predicted_mean_ms": 579.8507690429688,
+        "reference_mean_ms": 580.696533203125,
+        "mean_bias_ms": -0.8457921147346497,
+        "voxel_mae_ms": 14.079610796117072,
+        "voxel_rmse_ms": 17.91356982705371
+      }
+    ],
+    "roi_mean_metrics_ms": {
+      "n": 9,
+      "mae": 8.243554009331596,
+      "rmse": 12.891906147451245,
+      "mean_bias": -1.1016879611545138,
+      "bias_sd": 13.623911652671772,
+      "bland_altman_lower": -27.804554800391188,
+      "bland_altman_upper": 25.60117887808216,
+      "pearson_r": 0.9996895438836616,
+      "r_squared": 0.9992994349516391
+    },
+    "voxel_metrics_ms": {
+      "n": 1809,
+      "mae": 28.037592325374,
+      "rmse": 46.194004087010754,
+      "mean_bias": -1.094537856237476,
+      "bias_sd": 46.19380461212398,
+      "bland_altman_lower": -91.63439489600047,
+      "bland_altman_upper": 89.44531918352551,
+      "pearson_r": 0.9956161582753227,
+      "r_squared": 0.9909934097416657
+    }
+  },
+  "t2": {
+    "tube_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "per_tube": [
+      {
+        "tube": 1,
+        "n_voxels": 203,
+        "predicted_mean_ms": 32.60098648071289,
+        "reference_mean_ms": 29.674877166748047,
+        "mean_bias_ms": 2.9261081218719482,
+        "voxel_mae_ms": 4.147782894190897,
+        "voxel_rmse_ms": 5.125037377755318
+      },
+      {
+        "tube": 2,
+        "n_voxels": 198,
+        "predicted_mean_ms": 34.77777862548828,
+        "reference_mean_ms": 33.09090805053711,
+        "mean_bias_ms": 1.68686842918396,
+        "voxel_mae_ms": 3.9494951806887233,
+        "voxel_rmse_ms": 5.039240015457884
+      },
+      {
+        "tube": 3,
+        "n_voxels": 198,
+        "predicted_mean_ms": 110.50505065917969,
+        "reference_mean_ms": 113.35858917236328,
+        "mean_bias_ms": -2.8535373210906982,
+        "voxel_mae_ms": 10.227274230032256,
+        "voxel_rmse_ms": 12.44888679609893
+      },
+      {
+        "tube": 4,
+        "n_voxels": 200,
+        "predicted_mean_ms": 39.130001068115234,
+        "reference_mean_ms": 37.0099983215332,
+        "mean_bias_ms": 2.119999885559082,
+        "voxel_mae_ms": 4.660000123977661,
+        "voxel_rmse_ms": 5.8343809727463185
+      },
+      {
+        "tube": 5,
+        "n_voxels": 202,
+        "predicted_mean_ms": 33.821781158447266,
+        "reference_mean_ms": 32.28712844848633,
+        "mean_bias_ms": 1.5346531867980957,
+        "voxel_mae_ms": 3.8910893166419305,
+        "voxel_rmse_ms": 5.071762249455069
+      },
+      {
+        "tube": 6,
+        "n_voxels": 205,
+        "predicted_mean_ms": 123.41463470458984,
+        "reference_mean_ms": 122.65853881835938,
+        "mean_bias_ms": 0.7560969591140747,
+        "voxel_mae_ms": 7.458537366913586,
+        "voxel_rmse_ms": 9.383692287205513
+      },
+      {
+        "tube": 7,
+        "n_voxels": 201,
+        "predicted_mean_ms": 183.53233337402344,
+        "reference_mean_ms": 186.3681640625,
+        "mean_bias_ms": -2.8358263969421387,
+        "voxel_mae_ms": 7.144281036225125,
+        "voxel_rmse_ms": 8.890715612220015
+      },
+      {
+        "tube": 8,
+        "n_voxels": 201,
+        "predicted_mean_ms": 35.99005126953125,
+        "reference_mean_ms": 32.606964111328125,
+        "mean_bias_ms": 3.383084535598755,
+        "voxel_mae_ms": 3.980099749209276,
+        "voxel_rmse_ms": 5.152403705775868
+      },
+      {
+        "tube": 9,
+        "n_voxels": 201,
+        "predicted_mean_ms": 120.5671615600586,
+        "reference_mean_ms": 120.7960205078125,
+        "mean_bias_ms": -0.22885656356811523,
+        "voxel_mae_ms": 5.940299304563608,
+        "voxel_rmse_ms": 7.5376345993386815
+      }
+    ],
+    "roi_mean_metrics_ms": {
+      "n": 9,
+      "mae": 2.036116282145182,
+      "rmse": 2.273303335742499,
+      "mean_bias": 0.7209544711642795,
+      "bias_sd": 2.2867333240141896,
+      "bland_altman_lower": -3.761042843903532,
+      "bland_altman_upper": 5.2029517862320915,
+      "pearson_r": 0.9997869661403654,
+      "r_squared": 0.9982772674975373
+    },
+    "voxel_metrics_ms": {
+      "n": 1809,
+      "mae": 5.708126697571914,
+      "rmse": 7.572900692957743,
+      "mean_bias": 0.7274726089553454,
+      "bias_sd": 7.539962551845809,
+      "bland_altman_lower": -14.05085399266244,
+      "bland_altman_upper": 15.50579921057313,
+      "pearson_r": 0.9906619448253888,
+      "r_squared": 0.9809332031410165
+    }
+  }
+}

@@ -1,0 +1,569 @@
+{
+  "schema_version": "venus-summary-audit-v1",
+  "provenance": {
+    "dataset": "VENUS summary CSV",
+    "official_project": "https://qmrlab.org/VENUS/",
+    "osf_record": "https://osf.io/5n3cu/",
+    "input_file": "data/external/venus/VENUS_summary_merged.csv",
+    "input_md5": "331f85929228de656b837d47cb9f7b8d",
+    "source_units": "Values are preserved in the units and scale of the supplied CSV."
+  },
+  "scope_boundary": {
+    "used_in_synthetic_training": false,
+    "used_in_neural_model_selection": false,
+    "used_in_primary_mrf_endpoint": false,
+    "raw_temporal_mrf_available_in_this_audit": false,
+    "independent_reference_maps_available_in_this_audit": false,
+    "interpretation": "Contextual descriptive evidence of derived qMRI measurement shift; not MRF accuracy validation and not clinical inference."
+  },
+  "input": {
+    "n_rows": 36,
+    "n_subjects": 3,
+    "n_scanner_suffixes": 3,
+    "n_regions": 2,
+    "n_paired_rows": 18,
+    "variables": [
+      "T1 (avg-all)",
+      "MTsat (avg)",
+      "MTR (avg)"
+    ]
+  },
+  "paired_rows": [
+    {
+      "subject": "invivo1",
+      "scanner_suffix": "750",
+      "region": "gm",
+      "rth_session": "sub-invivo1_ses-rth750rev",
+      "vendor_session": "sub-invivo1_ses-vendor750rev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.8836,
+        "vendor": 2.1742,
+        "delta": 0.29059999999999997
+      },
+      "MTsat (avg)": {
+        "rth": 1.7813,
+        "vendor": 2.3245,
+        "delta": 0.5431999999999999
+      },
+      "MTR (avg)": {
+        "rth": 42.5151,
+        "vendor": 52.1921,
+        "delta": 9.677000000000007
+      }
+    },
+    {
+      "subject": "invivo1",
+      "scanner_suffix": "750",
+      "region": "wm",
+      "rth_session": "sub-invivo1_ses-rth750rev",
+      "vendor_session": "sub-invivo1_ses-vendor750rev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1484,
+        "vendor": 1.3515,
+        "delta": 0.20309999999999984
+      },
+      "MTsat (avg)": {
+        "rth": 4.0663,
+        "vendor": 4.8302,
+        "delta": 0.7638999999999996
+      },
+      "MTR (avg)": {
+        "rth": 53.7233,
+        "vendor": 61.3644,
+        "delta": 7.641100000000002
+      }
+    },
+    {
+      "subject": "invivo1",
+      "scanner_suffix": "PRI",
+      "region": "gm",
+      "rth_session": "sub-invivo1_ses-rthPRIrev",
+      "vendor_session": "sub-invivo1_ses-vendorPRIrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.9138,
+        "vendor": 1.8835,
+        "delta": -0.030299999999999994
+      },
+      "MTsat (avg)": {
+        "rth": 1.6881,
+        "vendor": 1.8308,
+        "delta": 0.14270000000000005
+      },
+      "MTR (avg)": {
+        "rth": 41.6828,
+        "vendor": 43.7374,
+        "delta": 2.0546000000000006
+      }
+    },
+    {
+      "subject": "invivo1",
+      "scanner_suffix": "PRI",
+      "region": "wm",
+      "rth_session": "sub-invivo1_ses-rthPRIrev",
+      "vendor_session": "sub-invivo1_ses-vendorPRIrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1508,
+        "vendor": 1.1473,
+        "delta": -0.0035000000000000586
+      },
+      "MTsat (avg)": {
+        "rth": 3.6144,
+        "vendor": 3.9932,
+        "delta": 0.3788
+      },
+      "MTR (avg)": {
+        "rth": 50.4034,
+        "vendor": 53.6781,
+        "delta": 3.274700000000003
+      }
+    },
+    {
+      "subject": "invivo1",
+      "scanner_suffix": "SKY",
+      "region": "gm",
+      "rth_session": "sub-invivo1_ses-rthSKYrev",
+      "vendor_session": "sub-invivo1_ses-vendorSKYrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.8762,
+        "vendor": 1.8612,
+        "delta": -0.015000000000000124
+      },
+      "MTsat (avg)": {
+        "rth": 1.9706,
+        "vendor": 1.7721,
+        "delta": -0.1984999999999999
+      },
+      "MTR (avg)": {
+        "rth": 45.3285,
+        "vendor": 42.7719,
+        "delta": -2.556599999999996
+      }
+    },
+    {
+      "subject": "invivo1",
+      "scanner_suffix": "SKY",
+      "region": "wm",
+      "rth_session": "sub-invivo1_ses-rthSKYrev",
+      "vendor_session": "sub-invivo1_ses-vendorSKYrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1767,
+        "vendor": 1.157,
+        "delta": -0.01970000000000005
+      },
+      "MTsat (avg)": {
+        "rth": 3.9926,
+        "vendor": 3.814,
+        "delta": -0.17859999999999987
+      },
+      "MTR (avg)": {
+        "rth": 53.8075,
+        "vendor": 52.8475,
+        "delta": -0.9600000000000009
+      }
+    },
+    {
+      "subject": "invivo2",
+      "scanner_suffix": "750",
+      "region": "gm",
+      "rth_session": "sub-invivo2_ses-rth750rev",
+      "vendor_session": "sub-invivo2_ses-vendor750rev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.9224,
+        "vendor": 2.1017,
+        "delta": 0.17930000000000001
+      },
+      "MTsat (avg)": {
+        "rth": 1.7975,
+        "vendor": 2.3004,
+        "delta": 0.5028999999999997
+      },
+      "MTR (avg)": {
+        "rth": 43.293,
+        "vendor": 50.8833,
+        "delta": 7.590299999999999
+      }
+    },
+    {
+      "subject": "invivo2",
+      "scanner_suffix": "750",
+      "region": "wm",
+      "rth_session": "sub-invivo2_ses-rth750rev",
+      "vendor_session": "sub-invivo2_ses-vendor750rev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1876,
+        "vendor": 1.3096,
+        "delta": 0.12200000000000011
+      },
+      "MTsat (avg)": {
+        "rth": 4.0045,
+        "vendor": 4.8681,
+        "delta": 0.8635999999999999
+      },
+      "MTR (avg)": {
+        "rth": 54.4146,
+        "vendor": 60.979,
+        "delta": 6.564399999999999
+      }
+    },
+    {
+      "subject": "invivo2",
+      "scanner_suffix": "PRI",
+      "region": "gm",
+      "rth_session": "sub-invivo2_ses-rthPRIrev",
+      "vendor_session": "sub-invivo2_ses-vendorPRIrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.7953,
+        "vendor": 1.7349,
+        "delta": -0.06039999999999979
+      },
+      "MTsat (avg)": {
+        "rth": 1.589,
+        "vendor": 1.8703,
+        "delta": 0.2813000000000001
+      },
+      "MTR (avg)": {
+        "rth": 38.4079,
+        "vendor": 42.5569,
+        "delta": 4.149000000000001
+      }
+    },
+    {
+      "subject": "invivo2",
+      "scanner_suffix": "PRI",
+      "region": "wm",
+      "rth_session": "sub-invivo2_ses-rthPRIrev",
+      "vendor_session": "sub-invivo2_ses-vendorPRIrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.0986,
+        "vendor": 1.0334,
+        "delta": -0.06519999999999992
+      },
+      "MTsat (avg)": {
+        "rth": 3.7518,
+        "vendor": 4.1845,
+        "delta": 0.4327000000000001
+      },
+      "MTR (avg)": {
+        "rth": 50.7135,
+        "vendor": 52.615,
+        "delta": 1.9014999999999986
+      }
+    },
+    {
+      "subject": "invivo2",
+      "scanner_suffix": "SKY",
+      "region": "gm",
+      "rth_session": "sub-invivo2_ses-rthSKYrev",
+      "vendor_session": "sub-invivo2_ses-vendorSKYrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.865,
+        "vendor": 1.8593,
+        "delta": -0.005700000000000038
+      },
+      "MTsat (avg)": {
+        "rth": 2.0144,
+        "vendor": 1.7955,
+        "delta": -0.2189000000000001
+      },
+      "MTR (avg)": {
+        "rth": 45.5501,
+        "vendor": 42.947,
+        "delta": -2.6030999999999977
+      }
+    },
+    {
+      "subject": "invivo2",
+      "scanner_suffix": "SKY",
+      "region": "wm",
+      "rth_session": "sub-invivo2_ses-rthSKYrev",
+      "vendor_session": "sub-invivo2_ses-vendorSKYrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1547,
+        "vendor": 1.1571,
+        "delta": 0.0023999999999999577
+      },
+      "MTsat (avg)": {
+        "rth": 3.7866,
+        "vendor": 3.865,
+        "delta": 0.07840000000000025
+      },
+      "MTR (avg)": {
+        "rth": 51.7159,
+        "vendor": 53.1269,
+        "delta": 1.4110000000000014
+      }
+    },
+    {
+      "subject": "invivo3",
+      "scanner_suffix": "750",
+      "region": "gm",
+      "rth_session": "sub-invivo3_ses-rth750rev",
+      "vendor_session": "sub-invivo3_ses-vendor750rev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.9507,
+        "vendor": 2.2866,
+        "delta": 0.33589999999999987
+      },
+      "MTsat (avg)": {
+        "rth": 1.7316,
+        "vendor": 2.1126,
+        "delta": 0.381
+      },
+      "MTR (avg)": {
+        "rth": 41.9528,
+        "vendor": 50.0298,
+        "delta": 8.076999999999998
+      }
+    },
+    {
+      "subject": "invivo3",
+      "scanner_suffix": "750",
+      "region": "wm",
+      "rth_session": "sub-invivo3_ses-rth750rev",
+      "vendor_session": "sub-invivo3_ses-vendor750rev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1451,
+        "vendor": 1.3695,
+        "delta": 0.22439999999999993
+      },
+      "MTsat (avg)": {
+        "rth": 4.1139,
+        "vendor": 4.7263,
+        "delta": 0.6124
+      },
+      "MTR (avg)": {
+        "rth": 54.07,
+        "vendor": 61.0792,
+        "delta": 7.0092
+      }
+    },
+    {
+      "subject": "invivo3",
+      "scanner_suffix": "PRI",
+      "region": "gm",
+      "rth_session": "sub-invivo3_ses-rthPRIrev",
+      "vendor_session": "sub-invivo3_ses-vendorPRIrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.773,
+        "vendor": 1.6811,
+        "delta": -0.09189999999999987
+      },
+      "MTsat (avg)": {
+        "rth": 1.489,
+        "vendor": 1.8421,
+        "delta": 0.35309999999999997
+      },
+      "MTR (avg)": {
+        "rth": 36.0334,
+        "vendor": 41.4862,
+        "delta": 5.452799999999996
+      }
+    },
+    {
+      "subject": "invivo3",
+      "scanner_suffix": "PRI",
+      "region": "wm",
+      "rth_session": "sub-invivo3_ses-rthPRIrev",
+      "vendor_session": "sub-invivo3_ses-vendorPRIrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.0221,
+        "vendor": 0.98192,
+        "delta": -0.040179999999999993
+      },
+      "MTsat (avg)": {
+        "rth": 3.8055,
+        "vendor": 4.1761,
+        "delta": 0.37060000000000004
+      },
+      "MTR (avg)": {
+        "rth": 49.3823,
+        "vendor": 51.34,
+        "delta": 1.9577000000000027
+      }
+    },
+    {
+      "subject": "invivo3",
+      "scanner_suffix": "SKY",
+      "region": "gm",
+      "rth_session": "sub-invivo3_ses-rthSKYrev",
+      "vendor_session": "sub-invivo3_ses-vendorSKYrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.916,
+        "vendor": 1.852,
+        "delta": -0.06399999999999983
+      },
+      "MTsat (avg)": {
+        "rth": 1.8723,
+        "vendor": 1.7569,
+        "delta": -0.11540000000000017
+      },
+      "MTR (avg)": {
+        "rth": 44.0551,
+        "vendor": 42.2479,
+        "delta": -1.8072000000000017
+      }
+    },
+    {
+      "subject": "invivo3",
+      "scanner_suffix": "SKY",
+      "region": "wm",
+      "rth_session": "sub-invivo3_ses-rthSKYrev",
+      "vendor_session": "sub-invivo3_ses-vendorSKYrev",
+      "delta_definition": "vendor minus rth",
+      "T1 (avg-all)": {
+        "rth": 1.1379,
+        "vendor": 1.1431,
+        "delta": 0.0052000000000000934
+      },
+      "MTsat (avg)": {
+        "rth": 3.8796,
+        "vendor": 3.7207,
+        "delta": -0.15890000000000004
+      },
+      "MTR (avg)": {
+        "rth": 52.1601,
+        "vendor": 51.806,
+        "delta": -0.3541000000000025
+      }
+    }
+  ],
+  "summary": {
+    "T1 (avg-all)": {
+      "all_pairs": {
+        "n": 18,
+        "mean_delta": 0.05372333333333334,
+        "sd_delta": 0.13452029249937583,
+        "median_delta": -0.0046000000000000485,
+        "min_delta": -0.09189999999999987,
+        "max_delta": 0.33589999999999987,
+        "mean_absolute_delta": 0.09770999999999996
+      },
+      "by_scanner_suffix": {
+        "750": {
+          "n": 6,
+          "mean_delta": 0.2258833333333333,
+          "sd_delta": 0.07716857952992692,
+          "median_delta": 0.21374999999999988,
+          "min_delta": 0.12200000000000011,
+          "max_delta": 0.33589999999999987,
+          "mean_absolute_delta": 0.2258833333333333
+        },
+        "PRI": {
+          "n": 6,
+          "mean_delta": -0.048579999999999936,
+          "sd_delta": 0.030755435291993434,
+          "median_delta": -0.05028999999999989,
+          "min_delta": -0.09189999999999987,
+          "max_delta": -0.0035000000000000586,
+          "mean_absolute_delta": 0.048579999999999936
+        },
+        "SKY": {
+          "n": 6,
+          "mean_delta": -0.016133333333333333,
+          "sd_delta": 0.025348267527913297,
+          "median_delta": -0.010350000000000081,
+          "min_delta": -0.06399999999999983,
+          "max_delta": 0.0052000000000000934,
+          "mean_absolute_delta": 0.018666666666666682
+        }
+      }
+    },
+    "MTsat (avg)": {
+      "all_pairs": {
+        "n": 18,
+        "mean_delta": 0.2685722222222222,
+        "sd_delta": 0.3391446781425565,
+        "median_delta": 0.36185,
+        "min_delta": -0.2189000000000001,
+        "max_delta": 0.8635999999999999,
+        "mean_absolute_delta": 0.3652722222222222
+      },
+      "by_scanner_suffix": {
+        "750": {
+          "n": 6,
+          "mean_delta": 0.6111666666666665,
+          "sd_delta": 0.17684423277751143,
+          "median_delta": 0.5778,
+          "min_delta": 0.381,
+          "max_delta": 0.8635999999999999,
+          "mean_absolute_delta": 0.6111666666666665
+        },
+        "PRI": {
+          "n": 6,
+          "mean_delta": 0.3265333333333334,
+          "sd_delta": 0.10246128374496713,
+          "median_delta": 0.36185,
+          "min_delta": 0.14270000000000005,
+          "max_delta": 0.4327000000000001,
+          "mean_absolute_delta": 0.3265333333333334
+        },
+        "SKY": {
+          "n": 6,
+          "mean_delta": -0.1319833333333333,
+          "sd_delta": 0.10900710833090971,
+          "median_delta": -0.16874999999999996,
+          "min_delta": -0.2189000000000001,
+          "max_delta": 0.07840000000000025,
+          "mean_absolute_delta": 0.1581166666666667
+        }
+      }
+    },
+    "MTR (avg)": {
+      "all_pairs": {
+        "n": 18,
+        "mean_delta": 3.2488500000000005,
+        "sd_delta": 3.9561408256100825,
+        "median_delta": 2.6646500000000017,
+        "min_delta": -2.6030999999999977,
+        "max_delta": 9.677000000000007,
+        "mean_absolute_delta": 4.168961111111112
+      },
+      "by_scanner_suffix": {
+        "750": {
+          "n": 6,
+          "mean_delta": 7.759833333333334,
+          "sd_delta": 1.078097688832822,
+          "median_delta": 7.6157,
+          "min_delta": 6.564399999999999,
+          "max_delta": 9.677000000000007,
+          "mean_absolute_delta": 7.759833333333334
+        },
+        "PRI": {
+          "n": 6,
+          "mean_delta": 3.131716666666667,
+          "sd_delta": 1.4487695433251844,
+          "median_delta": 2.6646500000000017,
+          "min_delta": 1.9014999999999986,
+          "max_delta": 5.452799999999996,
+          "mean_absolute_delta": 3.131716666666667
+        },
+        "SKY": {
+          "n": 6,
+          "mean_delta": -1.1449999999999996,
+          "sd_delta": 1.532975069595066,
+          "median_delta": -1.3836000000000013,
+          "min_delta": -2.6030999999999977,
+          "max_delta": 1.4110000000000014,
+          "mean_absolute_delta": 1.6153333333333333
+        }
+      }
+    }
+  }
+}

@@ -113,7 +113,7 @@ class DANN(AlgorithmBase):
             "loss": total,
             "pred_loss": pred_loss,
             "penalty": domain_loss,
-            "alpha": torch.tensor(self.grl.alpha),
+            "alpha": torch.as_tensor(self.grl.alpha, device=self.device),
         }
 
     def parameters(self):

@@ -1,0 +1,101 @@
+{
+  "path": "/home/sreenath/research-space/MR_domain_shift/data/synthetic/mrf_corrected_100k.h5",
+  "n_signals": 100000,
+  "signal_shape": [
+    100000,
+    1000
+  ],
+  "n_unique_sample_ids": 100000,
+  "n_unique_signal_hashes": 100000,
+  "n_unique_parameter_rows": 99995,
+  "duplicate_signal_rows": 0,
+  "duplicate_parameter_rows": 5,
+  "n_domains": 36,
+  "domain_counts": {
+    "ge_fa0_tr0_1.5T": 2778,
+    "ge_fa0_tr0_3.0T": 2777,
+    "ge_fa0_tr1_1.5T": 2778,
+    "ge_fa0_tr1_3.0T": 2777,
+    "ge_fa1_tr0_1.5T": 2778,
+    "ge_fa1_tr0_3.0T": 2777,
+    "ge_fa1_tr1_1.5T": 2778,
+    "ge_fa1_tr1_3.0T": 2777,
+    "ge_fa2_tr0_1.5T": 2777,
+    "ge_fa2_tr0_3.0T": 2777,
+    "ge_fa2_tr1_1.5T": 2777,
+    "ge_fa2_tr1_3.0T": 2777,
+    "philips_fa0_tr0_1.5T": 2778,
+    "philips_fa0_tr0_3.0T": 2778,
+    "philips_fa0_tr1_1.5T": 2778,
+    "philips_fa0_tr1_3.0T": 2778,
+    "philips_fa1_tr0_1.5T": 2778,
+    "philips_fa1_tr0_3.0T": 2778,
+    "philips_fa1_tr1_1.5T": 2778,
+    "philips_fa1_tr1_3.0T": 2778,
+    "philips_fa2_tr0_1.5T": 2778,
+    "philips_fa2_tr0_3.0T": 2778,
+    "philips_fa2_tr1_1.5T": 2778,
+    "philips_fa2_tr1_3.0T": 2778,
+    "siemens_fa0_tr0_1.5T": 2778,
+    "siemens_fa0_tr0_3.0T": 2778,
+    "siemens_fa0_tr1_1.5T": 2778,
+    "siemens_fa0_tr1_3.0T": 2778,
+    "siemens_fa1_tr0_1.5T": 2778,
+    "siemens_fa1_tr0_3.0T": 2778,
+    "siemens_fa1_tr1_1.5T": 2778,
+    "siemens_fa1_tr1_3.0T": 2778,
+    "siemens_fa2_tr0_1.5T": 2778,
+    "siemens_fa2_tr0_3.0T": 2778,
+    "siemens_fa2_tr1_1.5T": 2778,
+    "siemens_fa2_tr1_3.0T": 2778
+  },
+  "vendor_counts": {
+    "ge": 33328,
+    "philips": 33336,
+    "siemens": 33336
+  },
+  "parameter_min": [
+    50.083797454833984,
+    5.013589382171631
+  ],
+  "parameter_max": [
+    2999.9697265625,
+    499.98895263671875
+  ],
+  "metadata_ranges": {
+    "b0_hz": [
+      -52.99749755859375,
+      54.99629592895508
+    ],
+    "b1_scale": [
+      0.7600142359733582,
+      1.2599705457687378
+    ],
+    "snr": [
+      6.000162124633789,
+      99.99464416503906
+    ],
+    "field_strength": [
+      1.5,
+      3.0
+    ],
+    "fa_variant": [
+      0.0,
+      2.0
+    ],
+    "tr_variant": [
+      0.0,
+      1.0
+    ]
+  },
+  "attrs": {
+    "field_strengths": "[1.5 3. ]",
+    "n_domains": "36",
+    "n_signals": "100000",
+    "n_timepoints": "1000",
+    "seed_scheme": "sha256(base_seed, sample_id, domain)",
+    "simulator_version": "mrf-forward-v2",
+    "vendors": "['siemens' 'philips' 'ge']"
+  },
+  "valid": true
+}

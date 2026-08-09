@@ -1,0 +1,16 @@
+# Optional public raw-MRF validation environment.
+# Install MRpro using the existing project PyTorch stack; do not reinstall torch.
+ismrmrd==1.15.0
+xsdata==26.2
+torchnd==0.2.0
+pypulseq==1.5.0.post1
+pytorch-finufft==0.1.0
+finufft==2.5.1
+ptwt==1.0.1
+PyWavelets==1.9.0
+
+
+# The multi-scanner workflow also needs the public MRpro cMRF source tree:
+# https://github.com/PTB-MR/mrpro/tree/cMRF
+# It is cloned under data/external/mrpro_cmrf and placed on PYTHONPATH by
+# reproduce.sh external_multi. PyTorch is intentionally not reinstalled.

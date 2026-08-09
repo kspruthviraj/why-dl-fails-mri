@@ -1,0 +1,13 @@
+# Exact versions used for all reported results.
+# Environment: Python 3.12, CUDA 13.0, Ubuntu 22.04
+# Install: pip install -r requirements.txt
+torch==2.12.0
+numpy==2.4.6
+scipy==1.17.1
+h5py==3.16.0
+nibabel==5.4.2
+scikit-learn==1.9.0
+einops==0.8.2
+pyyaml==6.0.3
+tqdm==4.68.1
+matplotlib==3.10.9

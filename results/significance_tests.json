@@ -1,0 +1,51 @@
+{
+  "erm_vs_mixup_ds3": {
+    "erm_mean": 58.16074636189911,
+    "mixup_mean": 26.228883892101493,
+    "bootstrap": {
+      "mean_diff": 31.948812664604162,
+      "ci_95_low": 24.863913247559157,
+      "ci_95_high": 38.06800556368456,
+      "p_value": 0.0
+    },
+    "permutation": {
+      "observed_diff": 31.931862469797615,
+      "p_value": 0.0297
+    },
+    "wilcoxon_p": 0.25
+  },
+  "erm_vs_hybrid_ph": {
+    "erm_mean": 240.2954355875651,
+    "erm_ci_95": [
+      238.0679168701172,
+      244.1151123046875
+    ],
+    "hybrid": 193.21975708007812,
+    "hybrid_below_erm_ci": true
+  },
+  "erm_vs_coral_ds3": {
+    "erm_mean": 58.16074636189911,
+    "coral_mean": 56.621274322710086,
+    "bootstrap_p": 0.3018,
+    "wilcoxon_p": 0.5
+  },
+  "erm_vs_groupdro_ds3": {
+    "erm_mean": 58.16074636189911,
+    "groupdro_mean": 47.65198056513265,
+    "bootstrap_p": 0.525,
+    "wilcoxon_p": 0.75
+  },
+  "erm_vs_mixup_src": {
+    "erm_mean": 4.252813975016276,
+    "mixup_mean": 11.386452356974283,
+    "bootstrap_p": 0.0,
+    "significant": true
+  },
+  "t2_gt_t1_variability": {
+    "t1_mean_pct": 1.5758808430809523,
+    "t2_mean_pct": 4.93476996019242,
+    "ratio": 3.1314359723699763,
+    "t_statistic": 3.521227131917418,
+    "p_value": 0.07204425956941889
+  }
+}

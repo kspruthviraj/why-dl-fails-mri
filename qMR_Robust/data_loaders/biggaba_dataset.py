@@ -118,9 +118,12 @@ class BigGABADataset(Dataset):
 
         if not self._records:
             logger.warning(
-                "BigGABADataset: no files found under %s — falling back to "
-                "synthetic placeholder so the pipeline can be tested end-to-end.",
-                self.root,
+                "BigGABADataset: no files found under %s. "
+                "BigGABA data is NOT included in the repository. "
+                "Download from https://osf.io/n6v5e/ and extract to %s. "
+                "Falling back to synthetic placeholder so the pipeline can be tested end-to-end. "
+                "⚠ Results using placeholder data must NOT be reported in any paper.",
+                self.root, self.root,
             )
             self._placeholder(500)
 

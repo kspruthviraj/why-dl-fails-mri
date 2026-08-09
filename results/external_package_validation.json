@@ -1,0 +1,13 @@
+{
+  "schema_version": "external-mrf-intake-v1",
+  "protocol": "frozen external temporal-MRF neural-evaluation intake",
+  "root": "/home/sreenath/research-space/MR_domain_shift/data/external/external_mrf_package",
+  "status": "missing",
+  "checks": [],
+  "blocking_items": [],
+  "warnings": [],
+  "recommendations": [
+    "Place the author package at this path or pass --root explicitly."
+  ],
+  "counts": {}
+}

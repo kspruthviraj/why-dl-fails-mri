@@ -1,0 +1,34 @@
+name: Validate corrected pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validation dependencies
+        run: pip install numpy h5py pyyaml tqdm
+
+      - name: Compile project scripts
+        run: python3 -m py_compile qMR_Robust/simulators/manager.py scripts/*.py
+
+      - name: Generate a deterministic smoke dataset
+        run: |
+          PYTHONPATH=. python3 scripts/generate_corrected_data.py \
+            --output data/synthetic/mrf_ci.h5 --n-signals 120 --workers 1
+
+      - name: Validate uniqueness and metadata
+        run: |
+          PYTHONPATH=. python3 scripts/validate_dataset.py \
+            data/synthetic/mrf_ci.h5 --output results/data_validation_ci.json

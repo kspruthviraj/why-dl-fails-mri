@@ -1,0 +1,404 @@
+{
+  "schema_version": "corrected-method-effects-v1",
+  "protocol": {
+    "reference": "ERM",
+    "paired_unit": "held-out vendor x random seed",
+    "difference": "method target error minus ERM target error",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260809,
+    "target_labels_used": false,
+    "interpretation": "descriptive; random seeds are not independent datasets"
+  },
+  "methods": {
+    "coral": {
+      "paired_units": [
+        {
+          "vendor": "ge",
+          "seed": 123
+        },
+        {
+          "vendor": "ge",
+          "seed": 42
+        },
+        {
+          "vendor": "ge",
+          "seed": 456
+        },
+        {
+          "vendor": "philips",
+          "seed": 123
+        },
+        {
+          "vendor": "philips",
+          "seed": 42
+        },
+        {
+          "vendor": "philips",
+          "seed": 456
+        },
+        {
+          "vendor": "siemens",
+          "seed": 123
+        },
+        {
+          "vendor": "siemens",
+          "seed": 42
+        },
+        {
+          "vendor": "siemens",
+          "seed": 456
+        }
+      ],
+      "pooled": {
+        "mae": {
+          "n_pairs": 9,
+          "mean_delta_ms": 13.175023396809896,
+          "sd_delta_ms": 1.7242471706208797,
+          "bootstrap_ci95_ms": [
+            12.039545694986979,
+            14.124565336439344
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        },
+        "mae_t1": {
+          "n_pairs": 9,
+          "mean_delta_ms": 21.021196153428818,
+          "sd_delta_ms": 4.5496690106534805,
+          "bootstrap_ci95_ms": [
+            18.081917656792534,
+            23.676416015624998
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        },
+        "mae_t2": {
+          "n_pairs": 9,
+          "mean_delta_ms": 5.328859117296007,
+          "sd_delta_ms": 4.213344678704562,
+          "bootstrap_ci95_ms": [
+            2.985119014316135,
+            8.14566822052002
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        }
+      }
+    },
+    "groupdro": {
+      "paired_units": [
+        {
+          "vendor": "ge",
+          "seed": 123
+        },
+        {
+          "vendor": "ge",
+          "seed": 42
+        },
+        {
+          "vendor": "ge",
+          "seed": 456
+        },
+        {
+          "vendor": "philips",
+          "seed": 123
+        },
+        {
+          "vendor": "philips",
+          "seed": 42
+        },
+        {
+          "vendor": "philips",
+          "seed": 456
+        },
+        {
+          "vendor": "siemens",
+          "seed": 123
+        },
+        {
+          "vendor": "siemens",
+          "seed": 42
+        },
+        {
+          "vendor": "siemens",
+          "seed": 456
+        }
+      ],
+      "pooled": {
+        "mae": {
+          "n_pairs": 9,
+          "mean_delta_ms": -0.2657097710503472,
+          "sd_delta_ms": 1.1075441445537648,
+          "bootstrap_ci95_ms": [
+            -0.9070441351996528,
+            0.42993986341688367
+          ],
+          "wins_against_erm": 5,
+          "ties": 0,
+          "losses_against_erm": 4
+        },
+        "mae_t1": {
+          "n_pairs": 9,
+          "mean_delta_ms": -0.5098300509982638,
+          "sd_delta_ms": 1.4805568658618766,
+          "bootstrap_ci95_ms": [
+            -1.363372802734375,
+            0.4233462439643011
+          ],
+          "wins_against_erm": 5,
+          "ties": 0,
+          "losses_against_erm": 4
+        },
+        "mae_t2": {
+          "n_pairs": 9,
+          "mean_delta_ms": -0.021594577365451388,
+          "sd_delta_ms": 0.8239721902627323,
+          "bootstrap_ci95_ms": [
+            -0.507860459221734,
+            0.5016909705268011
+          ],
+          "wins_against_erm": 4,
+          "ties": 0,
+          "losses_against_erm": 5
+        }
+      }
+    },
+    "dann": {
+      "paired_units": [
+        {
+          "vendor": "ge",
+          "seed": 123
+        },
+        {
+          "vendor": "ge",
+          "seed": 42
+        },
+        {
+          "vendor": "ge",
+          "seed": 456
+        },
+        {
+          "vendor": "philips",
+          "seed": 123
+        },
+        {
+          "vendor": "philips",
+          "seed": 42
+        },
+        {
+          "vendor": "philips",
+          "seed": 456
+        },
+        {
+          "vendor": "siemens",
+          "seed": 123
+        },
+        {
+          "vendor": "siemens",
+          "seed": 42
+        },
+        {
+          "vendor": "siemens",
+          "seed": 456
+        }
+      ],
+      "pooled": {
+        "mae": {
+          "n_pairs": 9,
+          "mean_delta_ms": 0.5686102973090278,
+          "sd_delta_ms": 0.9514029015984681,
+          "bootstrap_ci95_ms": [
+            -0.014270358615451388,
+            1.1709595150417749
+          ],
+          "wins_against_erm": 3,
+          "ties": 0,
+          "losses_against_erm": 6
+        },
+        "mae_t1": {
+          "n_pairs": 9,
+          "mean_delta_ms": 0.7257029215494791,
+          "sd_delta_ms": 1.2579703718751722,
+          "bootstrap_ci95_ms": [
+            -0.05507460700141059,
+            1.5135379367404513
+          ],
+          "wins_against_erm": 2,
+          "ties": 0,
+          "losses_against_erm": 7
+        },
+        "mae_t2": {
+          "n_pairs": 9,
+          "mean_delta_ms": 0.41152530246310765,
+          "sd_delta_ms": 0.802014665171856,
+          "bootstrap_ci95_ms": [
+            -0.0874591827392578,
+            0.8853045357598196
+          ],
+          "wins_against_erm": 3,
+          "ties": 0,
+          "losses_against_erm": 6
+        }
+      }
+    },
+    "irm": {
+      "paired_units": [
+        {
+          "vendor": "ge",
+          "seed": 123
+        },
+        {
+          "vendor": "ge",
+          "seed": 42
+        },
+        {
+          "vendor": "ge",
+          "seed": 456
+        },
+        {
+          "vendor": "philips",
+          "seed": 123
+        },
+        {
+          "vendor": "philips",
+          "seed": 42
+        },
+        {
+          "vendor": "philips",
+          "seed": 456
+        },
+        {
+          "vendor": "siemens",
+          "seed": 123
+        },
+        {
+          "vendor": "siemens",
+          "seed": 42
+        },
+        {
+          "vendor": "siemens",
+          "seed": 456
+        }
+      ],
+      "pooled": {
+        "mae": {
+          "n_pairs": 9,
+          "mean_delta_ms": 705.9036085340712,
+          "sd_delta_ms": 29.5890635715444,
+          "bootstrap_ci95_ms": [
+            686.2899163987901,
+            721.9247247483995
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        },
+        "mae_t1": {
+          "n_pairs": 9,
+          "mean_delta_ms": 1296.8967658148872,
+          "sd_delta_ms": 73.00139349612095,
+          "bootstrap_ci95_ms": [
+            1248.3223931630453,
+            1335.900591108534
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        },
+        "mae_t2": {
+          "n_pairs": 9,
+          "mean_delta_ms": 114.91046396891277,
+          "sd_delta_ms": 17.36970884541354,
+          "bootstrap_ci95_ms": [
+            104.54713779025607,
+            125.74993472629123
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        }
+      }
+    },
+    "vrex": {
+      "paired_units": [
+        {
+          "vendor": "ge",
+          "seed": 123
+        },
+        {
+          "vendor": "ge",
+          "seed": 42
+        },
+        {
+          "vendor": "ge",
+          "seed": 456
+        },
+        {
+          "vendor": "philips",
+          "seed": 123
+        },
+        {
+          "vendor": "philips",
+          "seed": 42
+        },
+        {
+          "vendor": "philips",
+          "seed": 456
+        },
+        {
+          "vendor": "siemens",
+          "seed": 123
+        },
+        {
+          "vendor": "siemens",
+          "seed": 42
+        },
+        {
+          "vendor": "siemens",
+          "seed": 456
+        }
+      ],
+      "pooled": {
+        "mae": {
+          "n_pairs": 9,
+          "mean_delta_ms": 34.06077745225694,
+          "sd_delta_ms": 3.755088920684983,
+          "bootstrap_ci95_ms": [
+            31.756577301025388,
+            36.33801600138346
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        },
+        "mae_t1": {
+          "n_pairs": 9,
+          "mean_delta_ms": 68.34849548339844,
+          "sd_delta_ms": 7.651138963114946,
+          "bootstrap_ci95_ms": [
+            63.685309982299806,
+            72.98366559346516
+          ],
+          "wins_against_erm": 0,
+          "ties": 0,
+          "losses_against_erm": 9
+        },
+        "mae_t2": {
+          "n_pairs": 9,
+          "mean_delta_ms": -0.22692701551649305,
+          "sd_delta_ms": 0.4405042965444215,
+          "bootstrap_ci95_ms": [
+            -0.4872035132514106,
+            0.05044977400037975
+          ],
+          "wins_against_erm": 6,
+          "ties": 0,
+          "losses_against_erm": 3
+        }
+      }
+    }
+  }
+}

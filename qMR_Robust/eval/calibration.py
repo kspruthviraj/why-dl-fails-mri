@@ -28,73 +28,44 @@ def expected_calibration_error_regression(
     uncertainty: Tensor,
     n_bins: int = 15,
 ) -> Dict[str, float]:
-    """
-    Compute ECE for regression using prediction intervals.
+    """Compute calibration error from empirical prediction-interval coverage.
 
-    Parameters
-    ----------
-    pred : (N,) or (N, D) predictions
-    target : same shape as pred
-    uncertainty : (N,) or (N, D) predicted uncertainty (std dev)
-    n_bins : number of calibration bins
-
-    Returns
-    -------
-    dict with "ece", "bin_accuracies", "bin_confidences"
+    Each bin corresponds to a nominal central Gaussian interval.  The previous
+    implementation grouped residuals by their observed z-score and compared
+    unconditional frequencies with Gaussian mass, which was not a calibration
+    curve.
     """
     if pred.dim() > 1:
         pred = pred.flatten()
         target = target.flatten()
         uncertainty = uncertainty.flatten()
 
-    pred = pred.detach().cpu()
-    target = target.detach().cpu()
-    uncertainty = uncertainty.detach().cpu().clamp(min=1e-8)
+    pred = pred.detach().cpu().float()
+    target = target.detach().cpu().float()
+    uncertainty = uncertainty.detach().cpu().float().clamp(min=1e-8)
+    abs_error = (target - pred).abs()
 
-    # Standardised residuals — should follow N(0,1) if calibrated
-    z_scores = (target - pred) / uncertainty
-    abs_z = z_scores.abs()
+    nominal = torch.linspace(0.05, 0.95, n_bins)
+    from scipy.stats import norm
 
-    bin_edges = torch.linspace(0, min(abs_z.max().item(), 4.0), n_bins + 1)
-    bin_accs = []
-    bin_confs = []
-    bin_counts = []
+    empirical = []
+    details = []
+    for level in nominal.tolist():
+        z = float(norm.ppf((1.0 + level) / 2.0))
+        covered = (abs_error <= z * uncertainty).float().mean().item()
+        empirical.append(covered)
+        details.append({
+            "nominal_coverage": float(level),
+            "empirical_coverage": float(covered),
+        })
 
-    for i in range(n_bins):
-        lo, hi = bin_edges[i], bin_edges[i + 1]
-        mask = (abs_z >= lo) & (abs_z < hi)
-        count = mask.sum().item()
-        if count == 0:
-            continue
-
-        # Empirical coverage: fraction of points within this z-band
-        empirical_coverage = mask.float().mean().item()
-
-        # Expected coverage from Gaussian
-        from scipy.stats import norm
-        expected_coverage = float(norm.cdf(hi.item()) - norm.cdf(lo.item()))
-
-        bin_accs.append(empirical_coverage)
-        bin_confs.append(expected_coverage)
-        bin_counts.append(count)
-
-    if not bin_counts:
-        return {"ece": 0.0, "mean_abs_z": 0.0, "bin_details": []}
-
-    total = sum(bin_counts)
-    ece = sum(
-        abs(a - c) * (n / total)
-        for a, c, n in zip(bin_accs, bin_confs, bin_counts)
-    )
-
+    ece = float(np.mean(np.abs(np.asarray(empirical) - nominal.numpy())))
+    standardized = abs_error / uncertainty
     return {
-        "ece": float(ece),
-        "mean_abs_z": float(abs_z.mean().item()),
-        "std_abs_z": float(abs_z.std().item()),
-        "bin_details": [
-            {"accuracy": a, "confidence": c, "count": n}
-            for a, c, n in zip(bin_accs, bin_confs, bin_counts)
-        ],
+        "ece": ece,
+        "mean_abs_z": float(standardized.mean().item()),
+        "std_abs_z": float(standardized.std().item()),
+        "bin_details": details,
     }
 
 

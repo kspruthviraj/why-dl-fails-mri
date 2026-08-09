@@ -1,0 +1,17 @@
+2026-06-23 08:05:16,707 INFO Training ERM model (seed=42) ...
+2026-06-23 08:11:04,071 INFO Running dictionary matching (5k Siemens training signals) ...
+2026-06-23 08:11:16,243 INFO Training dynamic gate ...
+2026-06-23 08:23:12,998 INFO Results:
+2026-06-23 08:23:12,998 INFO   philips:
+2026-06-23 08:23:12,998 INFO     dl_only: 245.5892
+2026-06-23 08:23:12,998 INFO     dict_only: 251.3730
+2026-06-23 08:23:12,998 INFO     static_hybrid: 200.7063
+2026-06-23 08:23:12,998 INFO     dynamic_hybrid: 251.3721
+2026-06-23 08:23:12,998 INFO     static_alpha: 0.6353
+2026-06-23 08:23:12,998 INFO     dynamic_alpha_mean: 0.0000
+2026-06-23 08:23:12,998 INFO     dynamic_alpha_std: 0.0000
+2026-06-23 08:23:12,999 INFO   ge:
+2026-06-23 08:23:12,999 INFO     dl_only: 253.5555
+2026-06-23 08:23:12,999 INFO     dict_only: 242.5986
+2026-06-23 08:23:12,999 INFO     dynamic_hybrid: 242.5977
+2026-06-23 08:23:12,999 INFO     dynamic_alpha_mean: 0.0000
